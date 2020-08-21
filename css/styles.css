@@ -580,160 +580,27 @@ section .section-header h3::before, section .section-header h3::after {
 =======================  Events  ========================
 ---------------------------------------------------------------*/
 
-#events .event-tile {
+#events .event {
 	margin: auto;
 }
 
-#events img {
-	height: 100%;
-	width: 100%;
-}
-
-#events .event-tile .tile img {
-	height: 100%;
-	width: 100%;
-	cursor: pointer;
-}
-
-#events .event-tile .tile span {
-	position: absolute;
-	width: 100%;
-	font-size: 20px;
-	padding-left: 5px;
-	cursor: pointer;
-}
-
-#events .event-tile i {
-	font-size: 25px;
-	background-color: rgb(255, 0, 0);
-	text-align: center;
-	padding: 5px;
-	border-radius: 50%;
-	color: rgb(252, 249, 249);
-	position: relative;
-	left: 40px;
-	bottom: 15px;
-	z-index: 10000;
-}
-
-#events .event-tile .event-overlay {
-	position: fixed;
-	height: 100vh;
-	width: 100vw;
-	top: 0;
-	left: 0;
-	background-color: #000a0ab2;
-	z-index: 9900;
-	display: none;
-}
-
-#events .event-description {
-	position: fixed;
-	background-color: rgb(238, 219, 206);
-	top: 15vh;
-	left: 15vw;
-	height: 70vh;
-	width: 70vw;
-	z-index: 9999;
-	overflow-y: scroll;
-	overflow-x: hidden;
-	padding: 50px;
-	border-radius: 30px;
-	padding-top: 30px;
-	scrollbar-width: none;
-}
-
-.event-description h3 {
-	text-align: center;
-	position: relative;
-	left: 10px;
-	font-weight: bold;
-}
-
-.event-description p {
-	padding-top: 30px;	
-}
-
-#event-gallery {
-	width: 50vw;
+#events .poster{
 	margin: auto;
-	padding-top: 15px;
 }
 
-#event-gallery img {
-	border-radius: 30px;
+#events .poster img {
+	width: 100%;
 }
 
-#event-gallery .icofont-rounded-left , #event-gallery .icofont-rounded-right {
-	color: #000a0a;
+#events .event-description h3 {
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	margin-top: 10px;
+	margin-bottom: 15px;
 }
 
-.event-description::-webkit-scrollbar {
-	display: none;
+#events .event-description p {
+	font-size: 16px;
 }
-
-@media (max-width: 575px) {
-	#event-gallery {
-		width: 45vw;
-		padding-top: 5px;
-	}
-	#event-gallery img {
-		border-radius: 20px;
-	}	
-	#events .event-description {
-		padding: 25px;
-		padding-top: 20px;
-	}
-	#events .event-tile i {
-		margin-right: 30px;
-		margin-top: 10px;
-		font-size: 20px;
-	}
-	.event-description h3 {
-		font-size: 22px;
-	}
-	#events .section-header {
-		padding-bottom: 14px;
-	}
-	#event-gallery .icofont-rounded-left , #event-gallery .icofont-rounded-right {
-		font-size: 30px;
-	}
-}
-
-@media (min-width: 992px) {
-	.event-description h3 {
-		font-size: 36px;
-	}
-	.event-description p {
-		font-size: 18px;
-	}
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-	#event-gallery {
-		width: 45vw;
-		padding-top: 5px;
-	}
-}
-
-@media (min-width: 1200px) {
-	#event-gallery {
-		width: 35vw;
-	}
-	#events .event-description {
-		top: 15vh;
-		left: 20vw;
-		width: 60vw;
-	}	
-}
-
-@media (max-width: 992px) {
-	#events .event-tile .tile span {
-		font-size: 13px;
-	}
-}
-
-
 
 
 /*-------------------------------------------------------------
