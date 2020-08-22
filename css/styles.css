@@ -11,6 +11,14 @@ html, body {
 	scrollbar-width: none;
 }
 
+body {
+	background: linear-gradient(rgba(3, 34, 25, 0.815), rgba(7, 13, 34, 0.849)), url("../images/announcement.jpg") fixed center center;
+	background-size: cover;
+	position: relative;
+	background-repeat: no-repeat;
+	color: white;
+}
+
 a:hover {
 	text-decoration: none;
 }
@@ -193,7 +201,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .nav-menu li a {
-	padding: 25px 8px 25px 8px;
+	padding: 25px 15px 25px 15px;
 }
 
 .nav-menu > ul {
@@ -255,17 +263,10 @@ body::-webkit-scrollbar-thumb {
 	color: #ff5e00;
 }
 
-@media (min-width: 992px) and (max-width: 1199px){
+@media (min-width: 992px) {
 	.nav-menu li a {
 		font-size: 20px;
-		padding-left: 10px;
-	}
-}
-
-
-@media (min-width: 1200px) {
-	.nav-menu li a {
-		font-size: 20px;
+		padding-left: 15px;
 	}
 }
 
@@ -469,7 +470,7 @@ body::-webkit-scrollbar-thumb {
 
 section {
 	padding: 40px;
-	background-color: #f5efea;
+	background-color: #f5efea00;
 }
 
 section .section-header h3 {
@@ -482,7 +483,7 @@ section .section-header h3::before, section .section-header h3::after {
 	content: "";
 	height: 3px;
 	width: 70px;
-	background-color: #ff5e00;
+	background-color: #e46a24d7;
 	display: inline-block;
 	vertical-align: middle;
 	margin: 5px;
@@ -502,12 +503,12 @@ section .section-header h3::before, section .section-header h3::after {
 
 @media (max-width: 400px) {
 	section .section-header h3 {
-		font-size: 30px;
+		font-size: 25px;
 		padding-bottom: 10px;
 	}
 	section .section-header h3::before, section .section-header h3::after {
 		height: 2px;
-		width: 30px;
+		width: 25px;
 	}
 }
 
@@ -580,6 +581,21 @@ section .section-header h3::before, section .section-header h3::after {
 =======================  Events  ========================
 ---------------------------------------------------------------*/
 
+#event-gallery {
+	width: 100%;
+}
+
+#event-gallery .carousel-item {
+	position: relative;
+}
+
+#event-gallery .carousel-item .container {
+	position: absolute;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);}
+
 #events .event {
 	margin: auto;
 }
@@ -590,6 +606,7 @@ section .section-header h3::before, section .section-header h3::after {
 
 #events .poster img {
 	width: 100%;
+	height: 100%;
 }
 
 #events .event-description h3 {
@@ -602,13 +619,37 @@ section .section-header h3::before, section .section-header h3::after {
 	font-size: 16px;
 }
 
+@media (min-width: 1200px) {
+	#event-gallery .carousel-item {
+		min-height: 630px;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	#event-gallery .carousel-item {
+		min-height: 500px;
+	}
+}
+
+@media (min-width: 450px) and (max-width: 991px) {
+	#event-gallery .carousel-item {
+		min-height: 550px;
+	}
+}
+
+@media (max-width: 449px) {
+	#event-gallery .carousel-item {
+		min-height: 400px;
+	}
+}
+
 
 /*-------------------------------------------------------------
 =======================  Announcements  ========================
 ---------------------------------------------------------------*/
 
 #announcement {
-	background: linear-gradient(rgba(3, 34, 25, 0.815), rgba(7, 13, 34, 0.849)), url("../images/announcement.jpg") fixed center center;
+	background: linear-gradient(rgba(84, 204, 170, 0.815), rgba(102, 130, 235, 0.849));
 	background-size: cover;
 	position: relative;
 	background-repeat: no-repeat;
@@ -634,7 +675,7 @@ section .section-header h3::before, section .section-header h3::after {
 	padding: 10px 28px;
 	transition: 0.5s;
 	margin-top: 10px;
-	border: 2px solid #0b284d;
+	border: 2px solid #0b284d00;
 	color: rgb(205, 228, 5);
 	border-radius: 30px;
 	background-color: #0b284da8;
@@ -770,7 +811,7 @@ section .section-header h3::before, section .section-header h3::after {
 
 .contact .info-box {
 	text-align: center;
-	box-shadow: 0 0 10px #0f171d80;
+	box-shadow: 0 0 10px #6eb8f15e;
 	padding: 30px 0 30px 0;
 }
 
@@ -782,15 +823,15 @@ section .section-header h3::before, section .section-header h3::after {
 
 .contact .info-box i {
 	font-size: 32px;
-	color: #21149c;
+	color: #fb6a09;
 	border-radius: 50%;
 	padding: 8px;
-	border: 2px dotted #042ea0;
+	border: 2px dotted #fb6a09;
 }
 
 .contact .info-box h3 {
 	font-size: 24px;
-	color: #0b052c;
+	color: #fb6a09;
 }
 
 .contact .info-box p , .contact .info-box a {
@@ -800,8 +841,12 @@ section .section-header h3::before, section .section-header h3::after {
 	margin-bottom: 0;
 }
 
+.contact .info-box a {
+	color: #2cdbdb;
+}
+
 .contact .question .form {
-	box-shadow: 0 0 10px #0f171d80;
+	box-shadow: 0 0 10px #266188d2;
 	padding: 20px;
 	padding-bottom: 10px;
 }
