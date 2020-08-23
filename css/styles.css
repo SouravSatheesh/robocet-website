@@ -649,10 +649,11 @@ section .section-header h3::before, section .section-header h3::after {
 ---------------------------------------------------------------*/
 
 #announcement {
-	background: linear-gradient(rgba(84, 204, 170, 0.815), rgba(102, 130, 235, 0.849));
+	background: linear-gradient(rgba(0, 0, 0, 0.507), rgba(0, 0, 0, 0.541));
 	background-size: cover;
 	position: relative;
 	background-repeat: no-repeat;
+	box-shadow: 0 0 10px rgba(255, 255, 255, 0.295);
 }
 
 #announcement h3 {
