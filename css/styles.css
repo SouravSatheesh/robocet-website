@@ -413,7 +413,7 @@ body::-webkit-scrollbar-thumb {
 	padding-top: 80px;
 	width: 100vw;
 	height: 100vh;
-	background-size: contain;
+	background-size: cover;
 }
 
 #intro-gallery .icofont-rounded-left , #intro-gallery .icofont-rounded-right {
@@ -522,6 +522,10 @@ section .section-header h3::before, section .section-header h3::after {
 	text-align: center;
 }
 
+.about .content {
+	padding-right: 20px;
+}
+
 .about .section-header p {
 	padding-bottom: 5px;
 }
@@ -534,6 +538,9 @@ section .section-header h3::before, section .section-header h3::after {
 @media (max-width: 992px) {
 	.about .row .video {
 		height: 250px;
+	}
+	.about .content {
+		padding-right: 0;
 	}
 }
 
@@ -580,6 +587,9 @@ section .section-header h3::before, section .section-header h3::after {
 /*-------------------------------------------------------------
 =======================  Events  ========================
 ---------------------------------------------------------------*/
+#events {
+	position: relative;
+}
 
 #event-gallery {
 	width: 100%;
@@ -591,10 +601,10 @@ section .section-header h3::before, section .section-header h3::after {
 
 #event-gallery .carousel-item .container {
 	position: absolute;
-	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);}
+	transform: translate(-50%, -50%);
+}
 
 #events .event {
 	margin: auto;
@@ -616,6 +626,7 @@ section .section-header h3::before, section .section-header h3::after {
 }
 
 #events .event-description p {
+	padding-left: 20px;
 	font-size: 16px;
 }
 
