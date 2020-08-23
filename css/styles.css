@@ -860,6 +860,7 @@ section .section-header h3::before, section .section-header h3::after {
 
 .contact .question .form {
 	box-shadow: 0 0 10px #266188d2;
+	background-color: #000a0a71;
 	padding: 20px;
 	padding-bottom: 10px;
 }
