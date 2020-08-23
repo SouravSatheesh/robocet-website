@@ -606,6 +606,15 @@ section .section-header h3::before, section .section-header h3::after {
 	transform: translate(-50%, -50%);
 }
 
+#event-gallery .control {
+	border: 3px solid orange;
+	border-radius: 18px;
+	height: 36px;
+	width: 36px;
+	padding-top: 5px;
+	padding-right: 2px;
+}
+
 #events .event {
 	margin: auto;
 }
