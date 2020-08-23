@@ -813,6 +813,7 @@ section .section-header h3::before, section .section-header h3::after {
 	text-align: center;
 	box-shadow: 0 0 10px #6eb8f15e;
 	padding: 30px 0 30px 0;
+	background-color: #000a0a71;
 }
 
 .contact .map iframe {
