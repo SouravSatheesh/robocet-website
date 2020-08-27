@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Application of Control Theory for the Control of Pandemic Spread</title>
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../assets/icofont/icofont.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css">
+	<link rel="stylesheet" href="../../css/tutorial.css">
+</head>
+<body>
+
+	<header id="header" class="fixed-top">
+		<div class="container d-flex align-items-center">
+			<h1 class="logo mr-auto">
+			  <a href="../../index.htm">
+				  <img src="../../images/logo.png" alt="">
+			  </a>
+			</h1>
+		  <nav class="nav-menu d-none d-lg-block">
+			<ul>
+				<li><a href="../../index.htm">Home</a></li>
+				<li><a href="../articles.htm" class="active">Articles</a></li>
+				<li><a href="../tutorials.htm">Tutorials</a></li>
+				<li><a href="../projects.htm">Projects</a></li>
+			</ul>
+		  </nav>
+		</div>
+	</header><!-- End Header -->
+
+	
+	<section class="container heading">
+		<h2 class="title">Application of Control Theory for the Control of Pandemic Spread</h2>
+		<div>
+			<img src="../../images/person.png" class="author-img d-none d-md-flex" alt="">
+			<span class="author-name">
+				Abhishek Jayachandran (&nbsp;EEE&nbsp;2018-22&nbsp;)
+				<div class="date">date</div>				
+			</span>	
+		</div>
+	</section>
+
+	
+	<section class="container main-content">
+		<p><strong>The global pandemic COVID-19, as of writing this article, has claimed the lives of four lakh people across the world, and more than seven million confirmed cases. Quarantine has been enforced in most countries, and any if not all movements and activities brought to a standstill. Now amidst all the concerns, what naturally stands out is “How do we exit from this situation? Do we have a strategy?”</strong></p>
+		<p>This is exactly the question that I will try to answer through this article. But before we dive straight into it, there are some per-requisites one must be aware of.</p>
+		<p><strong style="font-size: 20px;">Firstly</strong>, pandemics are epidemics(ie. Infectious diseases) that affects a large number of people over  multiple countries or continents. What makes the COVID-19 pandemic so severe is because of its peculiarities. For starters, its Basic Reproduction Number (ie. the number of people an infected person infects during the course of her illness) is on the high side. The Basic Reproduction Number or Ro, as it is denoted by, is generally about 1.3 for an ordinary seasonal influenza. But the COVID-19 virus reportedly spread at the rates of 2.6 in Wuhan(where it originated) and at 2.76 to 3.25 during some outbreaks in Italy. Further, the disease has a long incubation period - up to 14 days between infection and symptoms. There is also uncertainty, as of now, whether a person can get re-infected.</p>
+		<p><strong style="font-size: 20px;">Secondly</strong>, Control Theory is an engineering principle wherein feedback based loops are implemented to stabilize a dynamic system. By this, we mean that for every action, we record its output and feed back the output to the input, so as to make a chain of cause-and-effect loops. Many important works have been carried out by epidemiologists and others to explore how a feedback based system can be applied to the pandemic situation, to help stabilize and diminish the rate of propagation of the disease.</p>
+		<p>The goal of pandemic intervention is “flattening the curve”, which is basically to reduce the number of new infections, meaning reducing the value of Ro to below 1. This means the number of new cases will decline and eventually reach zero. However, there are some constraints. Time is of importance, because of the disease’s relatively higher fatality rate.  Fatality rate depends on factors like age, physical fitness, region, access to healthcare, etc.</p>
+		<p>The two basic approaches to controlling the disease spread are mitigation and suppression. These fancy terms just mean focusing on slowing the rate of spread and aiming to reverse the rate of spread respectively. For mitigation Ro is reduced but remains greater than 1, whereas for suppression Ro is smaller than 1</p>
+		<p>Keeping in mind the challenges posed by various factors and uncertainties regarding the spread of the virus, a robust system is to be designed to apply our Control Theory principles to tackle the spread of the disease. The best of these ideas is an on-off approach to relaxing social-distancing measures. A research paper by the Imperial College COVID-19 Response Team showed how such a strategy is robust to uncertainty in both the reproduction number, R0, and in the severity of the virus and offers greater robustness to uncertainty.</p>
+		<p>For this on-off approach, we use the number of cases in hospital ICUs as a feedback variable. As of now, we do not have a fully defined scientifc model of COVID-19, which means that we will base our understanding of the system on the feedback we receive. However, one disadvantage of this on-off approach is that it can lead to oscillations.</p>
+		<p>To explore the effectiveness of this system, we design a series of scenarios, each showing a recovery strategy with a different level of feedback, and simulate the resulting policies against a commonly used infectious-disease computer model. We plot the results in a series of graphs showing COVID-19 hospital cases as a function of time. Hospital occupancy may be a more reliable and tangible measure than total case count, which depends on extensive testing that many countries do not have at the moment </p>
+		<figure>
+			<img src="../../images/articles/art2/img1-365.jpg" srcset="../../images/articles/art2/img1-900.jpg 1200w, ../../images/articles/art2/img1-365.jpg 700w" alt="">
+			<figcaption>Scenario 1 : Not doing anything</figcaption>
+		</figure>
+		<p>Obviously, not doing anything will not help. The virus spread will result in a sharp spike of serious cases, and overwhelms the capacity of the local hospitals.</p>
+		<figure>
+			<img src="../../images/articles/art2/img2-365.jpg" srcset="../../images/articles/art2/img2-900.jpg 1200w, ../../images/articles/art2/img2-365.jpg 700w" alt="">
+			<figcaption>Scenario 2 : Relaxing all restrictions when the initial number of infections comes down</figcaption>
+		</figure>
+		<p>Relaxing all restrictions after the initial number of cases drops will result in a second surge of infection, whose peak could be higher than the first</p>
+		<figure>
+			<img src="../../images/articles/art2/img3-365.jpg" srcset="../../images/articles/art2/img3-900.jpg 1200w, ../../images/articles/art2/img3-365.jpg 700w" alt="">
+			<figcaption>Scenario 3 : Simple On – Off Approach</figcaption>
+		</figure>
+		<p>A simple On-Off approach is implemented, where all the restrictions on gatherings, travel and social interaction are lifted entirely when the number of new ICU cases drops below a threshold. The restrictions are reimposed when this number exceeds a higher threshold. As you can see, the Ro swings sharply between two levels(one above 2 and the other below 1). This leads to aggressive oscillations, and the peaks will exceed the health care system’s capacity to treat patients. This type of system is highly unfavorable.</p>
+		<figure>
+			<img src="../../images/articles/art2/img4-365.jpg" srcset="../../images/articles/art2/img4-900.jpg 1200w, ../../images/articles/art2/img4-365.jpg 700w" alt="">
+			<figcaption>Scenario 4 : Systematic Approach</figcaption>
+		</figure>
+		<p>When R0 is high, many restrictions are put into place. People are largely confined to their homes and services are limited to the bare minimum needed for society to function—utilities, police, sanitation, and food distribution, for example. Then, as conditions begin to improve, as revealed by our feedback measure of hospital-bed occupancy, other services are gradually phased in. Recovered people are allowed to move freely as they can no longer contract, or transmit, the virus. Perhaps people are allowed to visit restaurants within walking distance, some small businesses are allowed to reopen under certain conditions, or certain age groups are subject to less-stringent restrictions. Then geographical mobility might be loosened in other ways. The point is that restrictions are eased gradually, with each new gradation based carefully on feedback.</p>
+		<p>This strategy results in a stable response that maximizes the rate of recovery. Furthermore, the demand for hospital ICU beds never exceeds a threshold, thanks to a “set point” target below that threshold. The health care capacity limit is never breached.</p>
+	</section>
+
+	<br>
+	<br>
+	<footer id="footer">
+		<div class="container d-md-flex">
+			<div class="mr-md-auto text-center text-md-left">
+				<div class="copyright">
+					&copy; Copyright <strong><span>RoboCET</span></strong>. All Rights Reserved
+				</div>
+				<div class="credits">
+					Designed by <strong>Sourav Satheesh</strong>
+				</div>
+			</div>
+			<div class="social-icons text-center text-md-right">
+				<a href="https://www.facebook.com/robocet/" target="blank"><i class="bx bxl-facebook-circle"></i></a>				
+				<a href="https://www.instagram.com/teamrobocet/" target="blank"><i class="bx bxl-instagram"></i></a>				
+				<a href="https://www.linkedin.com/company/robo-cet/" target="blank"><i class="bx bxl-linkedin"></i></a>				
+				<a href="https://github.com/robocet" target="blank"><i class="bx bxl-github"></i></a>				
+			</div>
+		</div>
+	</footer>
+	
+	<div id="aaa" style="height: 100vh; width: 100vw; position: fixed; top: 0; left: 0; z-index: -1000;"></div>
+	<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+	<script src="../../assets/jquery/jquery.min.js"></script>
+	<script src="../../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="../../assets/jquery.easing/jquery.easing.min.js"></script>
+	<script src="../../js/resources.js"></script>
+	<script src="../../assets/three.r119.min.js"></script>
+	<script src="../../assets/vanta.net.min.js"></script>
+	<script>
+	VANTA.NET({
+	  el: "#aaa",
+	  mouseControls: true,
+	  touchControls: true,
+	  gyroControls: true,
+	  minHeight: 100.00,
+	  minWidth: 100.00,
+	  scale: 1,
+	  scaleMobile: 1.00,
+	  color: 0xa75b17,
+	  backgroundColor: 0x04121d,
+	})
+	</script>
+</body>
+</html>

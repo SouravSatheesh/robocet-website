@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>What are Qubits?</title>
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../assets/icofont/icofont.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css">
+	<link rel="stylesheet" href="../../css/tutorial.css">
+</head>
+<body>
+
+	<header id="header" class="fixed-top">
+		<div class="container d-flex align-items-center">
+			<h1 class="logo mr-auto">
+			  <a href="../../index.htm">
+				  <img src="../../images/logo.png" alt="">
+			  </a>
+			</h1>
+		  <nav class="nav-menu d-none d-lg-block">
+			<ul>
+				<li><a href="../../index.htm">Home</a></li>
+				<li><a href="../articles.htm" class="active">Articles</a></li>
+				<li><a href="../tutorials.htm">Tutorials</a></li>
+				<li><a href="../projects.htm">Projects</a></li>
+			</ul>
+		  </nav>
+		</div>
+	</header><!-- End Header -->
+
+	
+	<section class="container heading">
+		<h2 class="title">What are Qubits? (in 3 levels of depth)</h2>
+		<div>
+			<img src="../../images/person.png" class="author-img d-none d-md-flex" alt="">
+			<span class="author-name">
+				Abhishek Jayachandran (&nbsp;EEE&nbsp;2018-22&nbsp;)
+				<div class="date">date</div>				
+			</span>	
+		</div>
+	</section>
+
+	
+	<section class="container main-content">
+		<h4 style="opacity: 0.6; padding-bottom: 10px;">“Nature isn’t classical, dammit, and if you want to make a simulation of nature, you’d better make it quantum mechanical” ~Richard Feynman</h4>
+		<blockquote><strong>LEVEL 1:</strong></blockquote>
+		<p>Quantum Computing is a new frontier in the world of computational sciences, which makes use of quantum mechanical phenomena observed in nature, like superposition and entanglement. To understand this, we first need to know how classical computation works. Classical computers are the devices you see and use everyday like your cellphones, calculators and laptops. They embrace the use of bits (0 and 1) to program the device, and any and all processes that a classical computer does can be reduced down to operations on these bit strings. Because these bits are binary, they are either high (1) or low (0) at any instant of time and do not assume any other arbitrary value. So fundamentally, the classical computer describes a deterministic device. On the other hand, a quantum computer uses quantum bits or qubits.<strong> A qubit can be visualized as being a unit sphere with a vector pointing from its body center to a point on its surface. This sphere is called the Bloch Sphere.</strong></p>
+		<figure class="text-center">
+			<img src="../../images/articles/art3/img1.png" style="background-color: white; padding: 10px; max-height: 600px; width: auto;" alt="">
+			<figcaption>Bloch Sphere</figcaption>
+		</figure>
+		<p>The state of the qubit is defined by the direction in which the vector is pointing. Now unlike classical bits, the qubit is not limited to just two states, but instead has an infinite number of different states. This is because as you are aware, there are an infinite number of points on the surface of a sphere, any of which the state vector can point to. I like to think of the Bloch Sphere as a locus of states of the qubit. From this we can say that changing the statevector changes the state of the qubit. In fact, quantum mechanics tells us that any operation that we do to this qubit are just rotations of the state vector. This is because all the operations that we do are norm-preserving. Norm-preserving means that the total probability of finding the qubit in that state is equal to one. This makes sense, because if the operation that we did were also to change the length of the statevector, then it would no longer point to the surface of the Bloch sphere!</p>
+		<blockquote><strong>LEVEL 2:</strong></blockquote>
+		<p>It is impossible to enumerate all the states that a qubit can exist in. To simplify things, we can define a finite number of states called basis states, with which we can represent any other state. For a single qubit, there are two basis states. These states are conventionally named |0⟩ and |1⟩. They are located along the Z axis of the sphere ( with |0⟩ on the north pole and |1⟩ on the south pole). Here is where things get interesting. Apart from these two points, every other point on the Bloch Sphere is a linear combination of |0⟩ and |1⟩. Which means they exist both in |0⟩ state and |1⟩ state simultaneously, in some probabilities. This phenomenon is called <strong>superposition.</strong></p>
+		<p>A general superposition state of a qubit is shown as <strong>|ψ⟩= a|0⟩ + b|1⟩</strong>, where ‘a’ and ‘b’ are complex numbers. Now if we were to measure the qubit in this state, its superposition will break down to either the|0⟩ or |1⟩ state. Depending on its superposition, the probability with which it falls to the bases states change. In fact, the square of the complex coefficients of the bases states (|a|² and |b|²) gives the probability of the qubit falling to that state (|0⟩ and |1⟩ respectively).</p>
+		<p><strong>Example:</strong> Suppose I rotate my state-vector such that the qubit now exists in the state (|0⟩ + |1⟩)/√2. The coefficients of both |0⟩ and |1⟩ are same, and their squares give probabilities of 1/2 each. We can show this through a sufficiently large number of measurements, the same way we flip a coin a hundred times to experimentally show the probability of landing heads and tails (Obviously we may not get an exact 50–50, but it will be close).</p>
+		<p><strong>Note:</strong> You may have noticed that the probabilities of the basis states in superposition are related to the rotations we make, specifically the angles of rotations. In fact, the coefficients are the probability amplitudes defined by the angles(as shown in the Bloch sphere diagram):</p>
+		<p><strong>a = cos(θ/2) and b = e^{i*φ }*sin(θ/2)</strong></p>
+		<p>This implies that every gate (operation) we apply on the qubit are just rotations of θ which changes its superposition state. This intuition is very important because it helps us understand how these gates are defined.</p>
+		<p>Let us now see two important single qubit gates.</p>
+		<ul>
+			<li>
+				The <strong>Pauli X Gate</strong> is the quantum counterpart of the classical NOT gate. It flips the qubit from the |0⟩ state to the |1⟩ state and vice versa. Think of this as holding a coin heads up, and then facing it upside-down so now you are looking at a tails. This gate does not send the qubit to superposition, as the qubit is definitely in one single state.
+				<figure class="text-center">
+					<img src="../../images/articles/art3/img2.gif" style="max-height: 600px;" alt="">
+					<figcaption>Pauli X Gate — Rotating the statevector 180 degrees about x axis</figcaption>
+				</figure>
+			</li>
+			<li>
+				The <strong>Hadamard Gate</strong> is the single most important gate in QC, and is responsible for sending the qubit into a superposition with equal likelihood of being |0⟩ or |1⟩ when measured. This is the rotation we did in the earlier example. So the superposition is like a coin toss. There are other gates that take the qubit to superposition too, which do not produce an equal likelihood of measuring |0⟩ and |1⟩. This is because the values of a and b (and therefore |a|² and |b|²) are not the same after these operations. Imagine this as tossing a biased coin.
+				<figure class="text-center">
+					<img src="../../images/articles/art3/img3.gif" style="max-height: 600px;" alt="">
+					<figcaption>Hadamard Gate — Rotation from |0⟩ state to (|0⟩+|1⟩)/√2</figcaption>
+				</figure>
+			</li>
+		</ul>
+		<p>The quantum gates that we apply are unitary in nature. That is, they are reversible. In case of Hadamard gate, applying it twice gives back the same state we started with! There are many more important gates and interesting properties regarding them, which I encourage you to discover for yourselves!</p>
+		<blockquote><strong>LEVEL 3:</strong></blockquote>
+		<p>Qubit states can be represented as vectors in an n dimensional Hilbert space. For a single qubit, the Hilbert space is two dimensional. The basis states |0⟩ and |1⟩ have the following vector representations:</p>
+		<figure class="text-center">
+			<img src="../../images/articles/art3/img4-365.png" srcset="../../images/articles/art3/img4-365.png 800w, ../../images/articles/art3/img4-700.png 1000w"  style="max-height: 600px; background-color: white;" alt="">
+		</figure>
+		<p>This allows us to do mathematical operations on the qubit states, since our gates are unitary matrices. Qubit gates and Quantum circuits are beyond the scope our discussion.</p>
+		<p><strong>Multiqubit states:</strong> Suppose that we have two qubits. Like a classical two bit system which has possible states 00, 01, 10 and 11, the basis states of the two qubit system can be defined as |00⟩, |01⟩, |10⟩ and |11⟩. Here we note that an arbitrary two qubit system is a linear combination of these four basis states. Multiqubit states cannot be represented as Bloch spheres.</p>
+		<p>To describe the multiqubit statevectors, we must familiarize ourselves with tensor products (or Kronecker product). Without going into much detail, tensor products multiply two vectors of dimensions <strong>m</strong> and <strong>n</strong> to produce a higher <strong>m*n</strong> dimensional vector.</p>
+		<figure class="text-center">
+			<img rc="../../images/articles/art3/img5-365.png" srcset="../../images/articles/art3/img5-365.png 800w, ../../images/articles/art3/img5-700.png 1000w" style="max-height: 600px; background-color: white;" alt="">
+		</figure class="text-center">
+		<p>The two qubit state |10⟩ can be explained as:</p>
+		<figure class="text-center">
+			<img rc="../../images/articles/art3/img6-365.png" srcset="../../images/articles/art3/img6-365.png 800w, ../../images/articles/art3/img6-700.png 1000w" style="max-height: 600px; background-color: white;" alt="">
+		</figure>
+		<p>Similarly we can show that all the four bases states are Kronecker products of |0⟩ and |1⟩.</p>
+		<p>Now as I said, an arbitrary 2 qubit system will look like:</p>
+		<p><strong>a|00⟩ + b|01⟩ + c|10⟩ + d|11⟩</strong> , where a, b, c and d are the probability amplitudes of the respective bases states. This is a fundamental property of qubits which separate it from classical bits: a two qubit system needs four parameters to define its state. Generally, an n qubit system requires ₂ⁿ parameters to define it, meaning (theoretically) that it carries more information.</p>
+		<figure class="text-center">
+			<img rc="../../images/articles/art3/img7-365.jpeg" srcset="../../images/articles/art3/img7-365.jpeg 800w, ../../images/articles/art3/img7-700.jpeg 1000w" style="max-height: 600px;" alt="">
+			<figcaption>n qubit system with set of all possible bases states. Each state can be decomposed as a tensor product of single qubit states belonging to the 2 dimensional complex plane C²</figcaption>
+		</figure>
+		<br>
+		<h4 style="opacity: 0.6; padding-bottom: 10px;">“Spooky Action at a Distance”</h4>
+		<p>There are situations when the two qubit system may only exist in some of the above mentioned bases states. For example:|00⟩ and |11⟩. This state is called a Bell State, and it represents the simplest (and maximal) example of <strong>Quantum Entanglement</strong>. Entangled particles share a bond such that actions on one particle reflect on the other. An implication of entanglement in the example of Bell State is that measuring the first qubit as say |0⟩ will instantly tell us that the other qubit is also |0⟩, irrespective of where it is. Its superposition breaks down the moment we measure its entangled pair. We cannot represent entangled states as tensor products of single qubit states. Entanglement is a property exhibited solely by quantum systems, and gave many scientists of the 20th century some serious headaches!</p>
+		<blockquote><strong>LEVEL ZERO:</strong></blockquote>
+		<p>Quantum computation holds the key to solving many challenging problems — that may require exponentially more time to solve on classical computers. It also finds applications in the fields of cryptography, chemistry, finance and machine learning. The IBM Quantum introduced me to quantum computing through their online quantum circuit composer <strong>IBMQ Experience</strong> and programming framework <strong>Qiskit</strong>. IBM also provides access to real quantum devices via the cloud for anyone interested to get a hands-on experience with a quantum computer.</p>
+		<p><a href="https://www.ibm.com/quantum-computing/"><strong>IBM | Quantum Computing</strong></a></p>
+		<p>Qiskit provides an online textbook for learning more about quantum computation, the programming involved and its applications, so do check it out.</p>
+		<p><a href="https://qiskit.org/textbook/preface.html">https://qiskit.org/textbook/preface.html</a></p>
+		<p>Qubits are the building blocks of a quantum computer. We now know what qubits are conceptually, but are yet to see how they are implemented in the real world. Let’s save that one for another day! However, you now have enough knowledge to explore the intricacies of Quantum Computing yourselves. So get out there, and make your own discoveries!</p>
+</section>
+
+	<br>
+	<br>
+	<footer id="footer">
+		<div class="container d-md-flex">
+			<div class="mr-md-auto text-center text-md-left">
+				<div class="copyright">
+					&copy; Copyright <strong><span>RoboCET</span></strong>. All Rights Reserved
+				</div>
+				<div class="credits">
+					Designed by <strong>Sourav Satheesh</strong>
+				</div>
+			</div>
+			<div class="social-icons text-center text-md-right">
+				<a href="https://www.facebook.com/robocet/" target="blank"><i class="bx bxl-facebook-circle"></i></a>				
+				<a href="https://www.instagram.com/teamrobocet/" target="blank"><i class="bx bxl-instagram"></i></a>				
+				<a href="https://www.linkedin.com/company/robo-cet/" target="blank"><i class="bx bxl-linkedin"></i></a>				
+				<a href="https://github.com/robocet" target="blank"><i class="bx bxl-github"></i></a>				
+			</div>
+		</div>
+	</footer>
+	
+	<div id="aaa" style="height: 100vh; width: 100vw; position: fixed; top: 0; left: 0; z-index: -1000;"></div>
+	<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+	<script src="../../assets/jquery/jquery.min.js"></script>
+	<script src="../../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="../../assets/jquery.easing/jquery.easing.min.js"></script>
+	<script src="../../js/resources.js"></script>
+	<script src="../../assets/three.r119.min.js"></script>
+	<script src="../../assets/vanta.net.min.js"></script>
+	<script>
+	VANTA.NET({
+	  el: "#aaa",
+	  mouseControls: true,
+	  touchControls: true,
+	  gyroControls: true,
+	  minHeight: 100.00,
+	  minWidth: 100.00,
+	  scale: 1,
+	  scaleMobile: 1.00,
+	  color: 0xa75b17,
+	  backgroundColor: 0x04121d,
+	})
+	</script>
+</body>
+</html>

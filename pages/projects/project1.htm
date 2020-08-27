@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Animatronic hand</title>
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../assets/icofont/icofont.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css">
+	<link rel="stylesheet" href="../../css/tutorial.css">
+</head>
+<body>
+
+	<header id="header" class="fixed-top">
+		<div class="container d-flex align-items-center">
+			<h1 class="logo mr-auto">
+			  <a href="../../index.htm">
+				  <img src="../../images/logo.png" alt="">
+			  </a>
+			</h1>
+		  <nav class="nav-menu d-none d-lg-block">
+			<ul>
+				<li><a href="../../index.htm">Home</a></li>
+				<li><a href="../articles.htm">Articles</a></li>
+				<li><a href="../tutorials.htm">Tutorials</a></li>
+				<li><a href="../projects.htm" class="active">Projects</a></li>
+			</ul>
+		  </nav>
+		</div>
+	</header><!-- End Header -->
+
+	
+	<section class="container heading">
+		<h2 class="title">Animatronic hand</h2>
+	</section>
+
+	
+	<section class="container main-content">
+		<p>Robots are often controlled using a remote controller with some buttons or a joystick. An animatronic hand is an exception to this. It is a robotic arm which is controlled by humans using a glove. This hand is designed to mimic the gestures of our hands. The animatronic hand developed by RoboCET consists of a sensor glove and a robotic arm.</p>
+		<figure class="text-center">
+			<img src="../../images/projects/proj1/img1.png" style="max-height: 400px; width: auto; max-width: 100%" alt="">
+			<figcaption>Animatronic hand</figcaption>
+		</figure>
+		<p>The sensor glove detects the movement of the reference hand and fingers through the flex sensors. The signal from the flex sensors is transferred to the microcontroller attached to the robotic arm. The microcontroller(Arduino UNO) on the robotic arm inputs signal and sends the signals accordingly to the servo motor in the arm. Accordingly, our gestures are imitated by the 3D printed arm.</p>
+		<p>There are numerous applications for this animatronic hand. It is used in the chemical industry since the direct exposure of certain chemicals is dangerous to humans.</p>
+		<br><h4>Materials Used:</h4>
+		<ul style="margin-left: 20px;">
+			<li>Flex sensors</li>
+			<li>Arduino UNO</li>
+			<li>3D Printed arm frame</li>
+			<li>Servo motors</li>
+			<li>Battery</li>
+			<li>Strings</li>
+		</ul>
+		<br><h4>Interface:</h4>
+		<br><h5>1. Flex sensor interface with Arduino</h5>
+		<p>A Flex sensor is a variable resistor, the resistance of which varies depending upon its bend. The basic flex sensor circuit is a simple voltage divider circuit. When the Flex sensor bends the resistance increases, so the voltage varies across the sensor.</p>
+		<figure class="text-center">
+			<img src="../../images/projects/proj1/img2.png" style="max-height: 500px; width: auto; max-width: 100%;" alt="">
+			<figcaption>Flex sensor interface with Arduino</figcaption>
+		</figure>
+		<ul>
+			<li>Connects one terminal of the flex sensor to the GND pin and other to the analog input pin of Arduino.</li>
+			<li>Connect a 10K resistor across the same analog input pin and 5V pin of the Arduino.</li>
+		</ul>
+		<blockquote>In its software interface, analogRead() is used to read the change in voltage across the sensor.</blockquote>
+		<br><h5>2. Servo motor interface with Arduino</h5>
+		<p>A servo motor is a rotary actuator or motor that enables precise angular position, acceleration, and speed control. The servo motor's rotation angle is regulated by a PWM signal applied to it. Servo motors have three terminals: power, ground, and control.</p>
+		<figure class="text-center">
+			<img src="../../images/projects/proj1/img3.png" style="max-height: 500px; width: auto; max-width: 100%" alt="">
+			<figcaption>Servo motor interface with Arduino</figcaption>
+		</figure>
+		<ul>
+			<li>Connects the power terminal to an external power supply.</li>
+			<li>Connects the control terminal of the servo to a digital pin of Arduino.</li>
+			<li>Connects both grounds of Arduino and external power supply to the control terminal of the servo motor.</li>
+		</ul>
+		<br><h4>Assembling:</h4>
+		<ul>
+			<li>Attach strings to each 3D printed arm’s finger.</li>
+			<li>Link the other end of the string to the servo motor.</li>
+			<li>Paste the flex sensors into each finger of the glove.</li>
+			<li>Construct 5 flex sensor interface with Arduino.</li>
+			<li>Construct 5 servo motor interface with Arduino.</li>
+		</ul>
+		<br><h4>Project Done by:</h4>
+		<ul><li>Don Dominic</li></ul>
+	</section>
+
+	<br>
+	<br>
+	<footer id="footer">
+		<div class="container d-md-flex">
+			<div class="mr-md-auto text-center text-md-left">
+				<div class="copyright">
+					&copy; Copyright <strong><span>RoboCET</span></strong>. All Rights Reserved
+				</div>
+				<div class="credits">
+					Designed by <strong>Sourav Satheesh</strong>
+				</div>
+			</div>
+			<div class="social-icons text-center text-md-right">
+				<a href="https://www.facebook.com/robocet/" target="blank"><i class="bx bxl-facebook-circle"></i></a>				
+				<a href="https://www.instagram.com/teamrobocet/" target="blank"><i class="bx bxl-instagram"></i></a>				
+				<a href="https://www.linkedin.com/company/robo-cet/" target="blank"><i class="bx bxl-linkedin"></i></a>				
+				<a href="https://github.com/robocet" target="blank"><i class="bx bxl-github"></i></a>				
+			</div>
+		</div>
+	</footer>
+	
+	<div id="aaa" style="height: 100vh; width: 100vw; position: fixed; top: 0; left: 0; z-index: -1000;"></div>
+	<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+	<script src="../../assets/jquery/jquery.min.js"></script>
+	<script src="../../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="../../assets/jquery.easing/jquery.easing.min.js"></script>
+	<script src="../../js/resources.js"></script>
+	<script src="../../assets/three.r119.min.js"></script>
+	<script src="../../assets/vanta.net.min.js"></script>
+	<script>
+	VANTA.NET({
+	  el: "#aaa",
+	  mouseControls: true,
+	  touchControls: true,
+	  gyroControls: true,
+	  minHeight: 100.00,
+	  minWidth: 100.00,
+	  scale: 1,
+	  scaleMobile: 1.00,
+	  color: 0xa75b17,
+	  backgroundColor: 0x04121d,
+	})
+	</script>
+</body>
+</html>

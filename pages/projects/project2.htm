@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BB - 8 Droid</title>
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../assets/icofont/icofont.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css">
+	<link rel="stylesheet" href="../../css/tutorial.css">
+</head>
+<body>
+
+	<header id="header" class="fixed-top">
+		<div class="container d-flex align-items-center">
+			<h1 class="logo mr-auto">
+			  <a href="../../index.htm">
+				  <img src="../../images/logo.png" alt="">
+			  </a>
+			</h1>
+		  <nav class="nav-menu d-none d-lg-block">
+			<ul>
+				<li><a href="../../index.htm">Home</a></li>
+				<li><a href="../articles.htm">Articles</a></li>
+				<li><a href="../tutorials.htm">Tutorials</a></li>
+				<li><a href="../projects.htm" class="active">Projects</a></li>
+			</ul>
+		  </nav>
+		</div>
+	</header><!-- End Header -->
+
+	
+	<section class="container heading">
+		<h2 class="title">BB - 8 Droid</h2>
+	</section>
+
+	
+	<section class="container main-content">
+		<p>BB-8 is a fictional droid character in the Star Wars franchise. It has a ball-shaped body and a domed head. BB-8's body rolls independently from the head, which always stays near the vertical axis of the droid.</p>
+		<figure class="text-center">
+			<img src="../../images/projects/proj2/img1.png" style="max-height: 500px; width: auto; max-width: 100%;" alt="">
+			<figcaption>BB - 8 Droid</figcaption>
+		</figure>
+		<p>At RoboCET, we built a BB-8 robot using the Arduino Uno. Our BB-8 is controlled by Bluetooth controller application (like Arduino Bluetooth Controller-All in One App) which can be installed on your phone. Pair the Bluetooth module to your smartphone.</p>
+		<br><h4>Materials Used:</h4>
+		<ul style="margin-left: 20px;">
+			<li>Arduino Uno</li>
+			<li>Bluetooth Module(HC-05)</li>
+			<li>Motor Drivers(L298N)</li>
+			<li>Johnson Geared Motor</li>
+			<li>Neodymium magnets</li>
+			<li>Wheels</li>
+			<li>Roll-on deodorants</li>
+			<li>PVC Pipe </li>
+			<li>Battery</li>
+			<li>Globe</li>
+		</ul>
+		<br><h4>Interface:</h4>
+		<br><h5>1. Bluetooth module Interface Arduino</h5>
+		<p>HC-05 Bluetooth Module is a Bluetooth system used to wirelessly connect microcontrollers with Bluetooth-enabled devices like smartphones. Its circuit is simple so that the user only needs a few steps to connect the Bluetooth module.</p>
+		<figure class="text-center">
+			<img src="../../images/projects/proj2/img2.png" style="max-height: 500px; width: auto; max-width: 100%;" alt="">
+			<figcaption>Bluetooth module Interface Arduino</figcaption>
+		</figure>
+		<ul>
+			<li>Connects the Vcc pin to the 5V pin of Arduino.</li>
+			<li>Connects the TX pin of the Bluetooth module to RX( Pin 0) of Arduino.</li>
+			<li>Connects the RX pin of the Bluetooth module to TX( Pin 1) of Arduino.</li>
+			<li>Connects GND to the GND of Arduino.</li>
+		</ul>
+		<br><h5>2. Motor Driver interface with Arduino</h5>
+		<p>Motor drivers serve as an interface between the motors and the control circuits. It allows you to control the working speed and the direction of two motors simultaneously. Motor Driver has 4 input pins, 4 output pins, 2 enable pins, Vcc, Vss, and GND.</p>
+		<figure class="text-center">
+			<img src="../../images/projects/proj2/img3.png" style="max-height: 500px; width: auto; max-width: 100%;" alt="">
+			<figcaption>Motor Driver interface with Arduino</figcaption>
+		</figure>
+		<ul>
+			<li>Connects the Vss pin to the positive terminal of the external supply.</li>
+			<li>Connects the 4 output pins to two motors.</li>
+			<li>Connects the 4 input pins to 4 digital pins of Arduino.</li>
+			<li>Connects Vcc(+5V) to Arduino 5V</li>
+			<li>Connect one GND pin to the negative terminal of the external supply and the other to the GND pin of Arduino</li>
+		</ul>
+		<br>
+		<blockquote>
+			<h4>Physics:</h4>
+			<br><h5>1. Physics Behind the Body</h5>
+			<p>BB-8’s body is a sphere that can roll. How do you make a sphere roll without pushing it? It requires a mass that can move inside the sphere. We enclosed a small wheeled vehicle inside the sphere.</p>
+			<p>As the car moves up the wall of the sphere a little, the center of mass of the entire sphere shifts upwards from the vertical axis with respect to the point of contact. When the center of mass shifts upwards, an external torque acts on the sphere. This torque then boosts the angular momentum of the sphere and causes it to roll. As the sphere begins to roll, the centre of mass tends to remain at its lowest point.</p>
+			<br><h5>1. Physics Behind the Head</h5>
+			<p>The head of BB-8 is not affixed to his body. The head is held in place by magnetic attraction to the body. In order to keep the head upright, the weight of the head must be less than the force of attraction. We used neodymium magnets here.The magnet inside the body is erected using a pipe fixed to the Bluetooth car.To minimise the friction between the body and the head, the rollers from the roll-on deodrants are placed between them.</p>
+		</blockquote>
+		<br><h4>Assembling:</h4>
+		<ul>
+			<li>Solder each motor with a black and a red wire and attach them to the base.</li>
+			<li>Join the wheels to the motors.</li>
+			<li>Connects the motors to the motor driver.</li>
+			<li>Upload the code to Arduino.</li>
+			<li>Connects the motor driver to the Arduino and to an external power supply.</li>
+			<li>Link the Bluetooth module to the Arduino.</li>
+			<li>Download a Bluetooth controller app.</li>
+			<li>Pair your device with the Bluetooth module</li>
+			<li>Place a Vertical rod in the center of the base. Fix all the hardware components on the board such as the body have equal weight distribution around the vertical rod.</li>
+			<li>Make the Magnetic Head Mechanism inside the body. Place it correctly at the other end of the vertical rod.</li>
+			<li>Cut a globe into two equal parts for the BB-8’s body. Place the all hardware mechanism inside the globe and seal it.</li>
+			<li>Attach the head to the body.</li>
+			<br>
+			<figure class="text-center">
+				<img src="../../images/projects/proj2/img4.png" style="max-height: 500px; width: auto; max-width: 100%;" alt="">
+				<figcaption>Assembling of the Droid</figcaption>
+			</figure>	
+		</ul>
+		<br><h4>Project Done by:</h4>
+		<ul>
+			<li>Vishal</li>
+			<li>Sreevisakh</li>
+			<li>Rohil P Lal</li>
+			<li>Sanjith Sreekanth</li>
+		</ul>
+	</section>
+
+	<br>
+	<br>
+	<footer id="footer">
+		<div class="container d-md-flex">
+			<div class="mr-md-auto text-center text-md-left">
+				<div class="copyright">
+					&copy; Copyright <strong><span>RoboCET</span></strong>. All Rights Reserved
+				</div>
+				<div class="credits">
+					Designed by <strong>Sourav Satheesh</strong>
+				</div>
+			</div>
+			<div class="social-icons text-center text-md-right">
+				<a href="https://www.facebook.com/robocet/" target="blank"><i class="bx bxl-facebook-circle"></i></a>				
+				<a href="https://www.instagram.com/teamrobocet/" target="blank"><i class="bx bxl-instagram"></i></a>				
+				<a href="https://www.linkedin.com/company/robo-cet/" target="blank"><i class="bx bxl-linkedin"></i></a>				
+				<a href="https://github.com/robocet" target="blank"><i class="bx bxl-github"></i></a>				
+			</div>
+		</div>
+	</footer>
+	
+	<div id="aaa" style="height: 100vh; width: 100vw; position: fixed; top: 0; left: 0; z-index: -1000;"></div>
+	<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+	<script src="../../assets/jquery/jquery.min.js"></script>
+	<script src="../../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="../../assets/jquery.easing/jquery.easing.min.js"></script>
+	<script src="../../js/resources.js"></script>
+	<script src="../../assets/three.r119.min.js"></script>
+	<script src="../../assets/vanta.net.min.js"></script>
+	<script>
+	VANTA.NET({
+	  el: "#aaa",
+	  mouseControls: true,
+	  touchControls: true,
+	  gyroControls: true,
+	  minHeight: 100.00,
+	  minWidth: 100.00,
+	  scale: 1,
+	  scaleMobile: 1.00,
+	  color: 0xa75b17,
+	  backgroundColor: 0x04121d,
+	})
+	</script>
+</body>
+</html>

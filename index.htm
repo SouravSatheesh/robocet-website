@@ -16,7 +16,8 @@
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
+<body id="background">
+	
 	
 	<!-- ========== Header =========== -->
 	<header id="header" class="fixed-top">
@@ -32,6 +33,13 @@
 				<li><a href="#about">About</a></li>
 				<li><a href="#aim">Vision</a></li>
 				<li><a href="#events">Events</a></li>
+				<li class="drop-down"><a href="">Resources</a>
+					<ul>
+						<li><a href="./pages/articles.htm">Articles</a></li>
+						<li><a href="./pages/tutorials.htm">Tutorials</a></li>
+						<li><a href="./pages/projects.htm">Projects</a></li>
+					</ul>
+				</li>
 				<li><a href="#announcement">Announcements</a></li>
 				<li><a href="#team">Team</a></li>
 				<li><a href="#contact">Contact</a></li>
@@ -212,6 +220,36 @@
 			</div>
 		</section><!-- End Events -->
 
+		<!-- ============= Resources ============== -->
+
+		<section id="resources">
+			<div class="section-header">
+				<h3> Resources </h3>
+			</div>
+			<div class="container" data-aos="zoom-in">
+				<div class="row">
+					<div class="col-md-4 resource text-center">
+							<a href="./pages/articles.htm" class="back">
+								<img src="./images/articles.png" style="padding: 20px; background-color: white;" alt="">
+							</a>	
+						<a href="./pages/articles.htm"><span>articles</span></a>
+					</div>
+					<div class="col-md-4 resource text-center">
+						<a href="./pages/tutorials.htm" class="back">
+							<img src="./images/tutorials.png" style="padding: 30px; background-color: white;" alt="">
+						</a>	
+					<a href="./pages/tutorials.htm"><span>tutorials</span></a>
+					</div>
+					<div class="col-md-4 resource text-center">
+						<a href="./pages/projects.htm" class="back">
+							<img src="./images/projects.png" style="padding: 20px; background-color: white;" alt="">
+						</a>	
+						<a href="./pages/projects.htm"><span>projects</span></a>
+					</div>
+				</div>
+			</div>
+		</section> <!-- End Resources Section -->
+		
 					
 		<!-- =========== Announcements =========== -->
 		
@@ -342,11 +380,13 @@
 		</div>
 	</footer>
 	
+	<div id="aaa" style="height: 100vh; width: 100vw; position: fixed; top: 0; left: 0; z-index: -1000;"></div>
+
 	
 	<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
-	<div id="loader-wrapper">
+	<!-- <div id="loader-wrapper">
 		<div id="loader"></div>
-	</div>		  
+	</div>		   -->
 			  
 			  
 			  
@@ -360,7 +400,22 @@
 	<script src="js/team.js"></script>
 	<script src="js/script.js"></script>
 	<script src="js/contact-from.js"></script>
-	
+	<script src="./assets/three.r119.min.js"></script>
+	<script src="./assets/vanta.net.min.js"></script>
+	<script>
+	VANTA.NET({
+	  el: "#aaa",
+	  mouseControls: true,
+	  touchControls: true,
+	  gyroControls: true,
+	  minHeight: 100.00,
+	  minWidth: 100.00,
+	  scale: 1,
+	  scaleMobile: 1.00,
+	  color: 0xa75b17,
+	  backgroundColor: 0x04121d,
+	})
+	</script>
 	<script>
 	!function(){
 		for(

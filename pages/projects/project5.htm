@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Safety Smart Glove</title>
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../assets/icofont/icofont.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css">
+	<link rel="stylesheet" href="../../css/tutorial.css">
+</head>
+<body>
+
+	<header id="header" class="fixed-top">
+		<div class="container d-flex align-items-center">
+			<h1 class="logo mr-auto">
+			  <a href="../../index.htm">
+				  <img src="../../images/logo.png" alt="">
+			  </a>
+			</h1>
+		  <nav class="nav-menu d-none d-lg-block">
+			<ul>
+				<li><a href="../../index.htm">Home</a></li>
+				<li><a href="../articles.htm">Articles</a></li>
+				<li><a href="../tutorials.htm">Tutorials</a></li>
+				<li><a href="../projects.htm" class="active">Projects</a></li>
+			</ul>
+		  </nav>
+		</div>
+	</header><!-- End Header -->
+
+	
+	<section class="container heading">
+		<h2 class="title">Safety Smart Glove</h2>
+	</section>
+
+	
+	<section class="container main-content">
+		<p>The problems of monitoring industrial labour can easily be tackled by this safety smart glove. The glove contains different sensors that can monitor the vital signs, body temperature, heartbeat, and movement of the employee thereby if anything cautious happens it will be reported back to the central hub.</p>
+		<figure class="text-center">
+			<img src="../../images/projects/proj5/img1.png" style="max-height: 500px; width: auto; max-width: 100%;" alt="">
+			<figcaption>Safety Smart Glove</figcaption>
+		</figure>
+		<p>The inspiration was the danger faced by mineworkers in Meghalaya. As most mine doesn’t have wifi connectivity and infrastructure, the LoRa together with this glove can help them.</p>
+		<br><h4>Materials Used:</h4>
+		<ul style="margin-left: 20px;">
+			<li>Air quality sensor (MQ135 Gas Sensor module)</li>
+			<li>Body temperature sensor LM35</li>
+			<li>Heartbeat sensor</li>
+			<li>Temperature and humidity sensor (DHT)</li>
+			<li>Distance sensor (Ultrasonic sensor)</li>
+			<li>RFID reader</li>
+			<li>LoRa Node</li>
+			<li>Arduino Uno</li>
+			<li>Glove</li>
+			<li>Battery</li>
+		</ul>
+		<br><h4>Mechanism:</h4>
+		<p> It also contains air quality sensors, temperature, and humidity sensors to monitor the environment through which the employee working thereby can warn him about the overexposure to hazardous gas and also by collecting data in the long term can be used to even predict the best insurance scheme.</p>
+		<p>Besides this in order to make the working smooth, it contains a distance sensor and RFID reader that can be used to measure the distance at ease by just pointing to the object to being measured. The RFID reader can ease the logistics inside the worksite and can also scan the boxes nearer to him to show what is inside it in the display attached to the glove.</p>
+		<p>The whole gloves will be connected by the latest LoRa technology in which communication can be made up to 10km range with current consumption in pico Ampere(thereby a battery can last up to years in the glove) contrary to wifi having 100m range at max and consuming mA of current).</p>
+		<blockquote>LoRa also helps to pinpoint the employer in the worksite by Triangulation method thereby acting as a local GPS without GPS.</blockquote>
+		<br><h4>Interface:</h4>
+		<br><h5>1. LoRa interface with Arduino</h5>
+		<p>The term LoRa stands for Long Range. LoRa is a wireless technology that provides long-range, low-power, and secure data transfer. Without consuming much power, LoRa technology can be used to transmit bi-directional information to a long distance.</p>
+		<figure class="text-center">
+			<img src="../../images/projects/proj5/img2.png" style="max-height: 500px; width: auto; max-width: 100%;" alt="">
+			<figcaption>LoRa interface with Arduino</figcaption>
+		</figure>
+		<ul>
+			<li>Connect the 3.3V pin of LoRa to the 3.3V pin of Arduino.</li>
+			<li>Connect the GND pin of LoRa to the GND pin of Arduino.</li>
+			<li>Connect RST, MOSI, MISO, SCK, DIO0, and Nss/En pins of LoRa to each digital pins of Arduino.</li>
+		</ul>
+		<br><h5>2. Body temperature sensor LM35 interface with Arduino</h5>
+		<p>LM35 is a temperature measuring system with an analog output voltage proportional to the temperature. It is a 3-terminal device.</p>
+		<figure class="text-center">
+			<img src="../../images/projects/proj5/img3.png" style="max-height: 500px; width: auto; max-width: 100%;" alt="">
+			<figcaption>Body temperature sensor LM35 interface with Arduino</figcaption>
+		</figure>
+		<ul>
+			<li>Connect the Vcc pin to the supply</li>
+			<li>Connect the OUT pin to the analog input pin of Arduino.</li>
+			<li>Connect the GND pin to the ground terminal.</li>
+		</ul>
+		<br><h5>3. Heartbeat sensor interface with Arduino</h5>
+		<p>Heartbeat Sensor is an electronic device used to measure heartbeat rates. The heartbeat is measured in beats per minute or bpm, which indicates the number of times in a minute that the heart contracts or expands.</p>
+		<figure class="text-center">
+			<img src="../../images/projects/proj5/img4.png" style="max-height: 500px; width: auto; max-width: 100%;" alt="">
+			<figcaption>Heartbeat sensor interface with Arduino</figcaption>
+		</figure>
+		<ul>
+			<li>Connect the Vcc pin to the 5V supply.</li>
+			<li>Connect the GND pin to the ground.</li>
+			<li>Connect the DATA pin heartbeat sensor to the analog input pin of Arduino</li>
+		</ul>
+		<br><h5>4. Air quality sensor interface with Arduino</h5>
+		<p>MQ135 gas sensors are used in air quality control equipment.</p>
+		<figure class="text-center">
+			<img src="../../images/projects/proj5/img5.png" style="max-height: 500px; width: auto; max-width: 100%;" alt="">
+			<figcaption>Air quality sensor interface with Arduino</figcaption>
+		</figure>
+		<ul>
+			<li>Connect the Vcc pin to the supply.</li>
+			<li>Connect the Analog out pin to the analog input pin of Arduino.</li>
+			<li>Connect the GND pin to the ground terminal.</li>
+		</ul>
+		<br><h5>5. Temperature and humidity sensor interface with Arduino</h5>
+		<p>DHT11 is used Temperature and humidity sensor.</p>
+		<figure class="text-center">
+			<img src="../../images/projects/proj5/img6.png" style="max-height: 500px; width: auto; max-width: 100%;" alt="">
+			<figcaption>Temperature and humidity sensor interface with Arduino</figcaption>
+		</figure>
+		<ul>
+			<li>Connect the Vcc pin to the 3.3V pin of Arduino.</li>
+			<li>Connect the GND pin of DHT11 to the GND pin of the Arduino.</li>
+			<li>Connect the DATA pin of the sensor to the analog input pin of Arduino.</li>
+		</ul>
+		<br><h5>6. Ultrasonic Sensor interface with Arduino</h5>
+		<p>TAn ultrasonic sensor is an electronic device that measures a target object's distance by transmitting ultrasonic sound waves and converts the sound reflected into an electrical signal. The module has 4 pins.</p>
+		<figure class="text-center">
+			<img src="../../images/projects/proj5/img7.png" style="max-height: 500px; width: auto; max-width: 100%;" alt="">
+			<figcaption>Ultrasonic Sensor interface with Arduino</figcaption>
+		</figure>
+		<ul>
+			<li>Link the Vcc pin of the sensor to the 5V of Arduino.</li>
+			<li>Connect the GND to the GND pin of Arduino.</li>
+			<li>Connect the Echo and trig pins to Digital pins of Arduino.</li>
+		</ul>
+		<br><h5>7. RFID reader interface with Arduino</h5>
+		<p>RFID (Radio Frequency Identification) reader is a device or circuit used to read data contained in the RFID tag wirelessly. Radio waves are used to transfer tag data to the reader. When an RFID card comes in the reader's range, the reader receives the unique data in the card in the form of an RF signal. RFID is a technology similar to barcodes. This module has 8 pins.</p>
+		<figure class="text-center">
+			<img src="../../images/projects/proj5/img8.png" style="max-height: 500px; width: auto; max-width: 100%;" alt="">
+			<figcaption>RFID reader interface with Arduino</figcaption>
+		</figure>
+		<ul>
+			<li>Connect 3.3V is given to the 3.3v pin of Arduino</li>
+			<li>Connect GND is given to the ground pin of the Arduino</li>
+			<li>Connect RST, MSO, MOSI, SCK, and SDA pins to digital pins Arduino.</li>
+		</ul>
+		<p>Since the digital pins of Arduino are not sufficient to make all the connections, hence I2C communication is used for RFID readers. So the RFID has only two terminals that need to connect in the digital pins of Arduino other than the power terminals.</p>
+		<br><h4>Assembling:</h4>
+		<ul>
+			<li>Connect the battery to the Arduino.</li>
+			<li>Construct LoRa interface.</li>
+			<li>Construct an interface between all sensors and Arduino.</li>
+			<li>Place all the hardware components in the glove</li>
+		</ul>
+		<br><h4>Project Done By:</h4>
+		<ul>
+			<li>Basil Mathai</li>
+			<li>Hariharan G</li>
+		</ul>
+	</section>
+
+	<br>
+	<br>
+	<footer id="footer">
+		<div class="container d-md-flex">
+			<div class="mr-md-auto text-center text-md-left">
+				<div class="copyright">
+					&copy; Copyright <strong><span>RoboCET</span></strong>. All Rights Reserved
+				</div>
+				<div class="credits">
+					Designed by <strong>Sourav Satheesh</strong>
+				</div>
+			</div>
+			<div class="social-icons text-center text-md-right">
+				<a href="https://www.facebook.com/robocet/" target="blank"><i class="bx bxl-facebook-circle"></i></a>				
+				<a href="https://www.instagram.com/teamrobocet/" target="blank"><i class="bx bxl-instagram"></i></a>				
+				<a href="https://www.linkedin.com/company/robo-cet/" target="blank"><i class="bx bxl-linkedin"></i></a>				
+				<a href="https://github.com/robocet" target="blank"><i class="bx bxl-github"></i></a>				
+			</div>
+		</div>
+	</footer>
+	
+	<div id="aaa" style="height: 100vh; width: 100vw; position: fixed; top: 0; left: 0; z-index: -1000;"></div>
+	<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+	<script src="../../assets/jquery/jquery.min.js"></script>
+	<script src="../../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="../../assets/jquery.easing/jquery.easing.min.js"></script>
+	<script src="../../js/resources.js"></script>
+	<script src="../../assets/three.r119.min.js"></script>
+	<script src="../../assets/vanta.net.min.js"></script>
+	<script>
+	VANTA.NET({
+	  el: "#aaa",
+	  mouseControls: true,
+	  touchControls: true,
+	  gyroControls: true,
+	  minHeight: 100.00,
+	  minWidth: 100.00,
+	  scale: 1,
+	  scaleMobile: 1.00,
+	  color: 0xa75b17,
+	  backgroundColor: 0x04121d,
+	})
+	</script>
+</body>
+</html>

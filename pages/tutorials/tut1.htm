@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../assets/icofont/icofont.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css">
+	<link rel="stylesheet" href="../../css/tutorial.css">
+</head>
+<body>
+
+	<header id="header" class="fixed-top">
+		<div class="container d-flex align-items-center">
+			<h1 class="logo mr-auto">
+			  <a href="../../index.htm">
+				  <img src="../../images/logo.png" alt="">
+			  </a>
+			</h1>
+		  <nav class="nav-menu d-none d-lg-block">
+			<ul>
+				<li><a href="../../index.htm">Home</a></li>
+				<li><a href="../articles.htm">Articles</a></li>
+				<li><a href="../tutorials.htm" class="active">Tutorials</a></li>
+				<li><a href="../projects.htm">Projects</a></li>
+			</ul>
+		  </nav>
+		</div>
+	</header><!-- End Header -->
+
+	
+	<section class="container heading">
+		<h2 class="title">How to Hack Wi-Fi Passwords (The Complete Guide)</h2>
+		<div>
+			<img src="../../images/person.png" class="author-img" alt="">
+			<span class="author-name">
+				Sudev Suresh Sreedevi (&nbsp;CSE&nbsp;2019-23&nbsp;)
+				<div class="date">date</div>				
+			</span>	
+		</div>
+	</section>
+	<section class="container main-content">
+				<h3>Preface</h3>
+			<p>
+				Before we dive right into the tutorial:
+			</p>
+			<ol>
+				<li>This tutorial is meant for all kinds of people out there, whether you are a fresh newbie who has just laid hands on the keyboard to the mega-genius geeks who can alter the reality of their dimension without having The Citadel involved.</li>
+				<li>You can always just scroll-by if you get an idea of what’s coming up.</li>
+				<li>This article will also cover some concepts to read by, just in case you want to understand the cogwheel of this. (I would be putting such conceptual paragraphs as separate blocks of text) In case you don’t want all that understanding, you can just scroll-by those too.</li>
+				<li>Whether doing this is illegal or not, depends on how and where you use it. I mean come on, anything you do can become illegal if you do it for the wrong purpose. The author does not hold any responsibility for any of the actions (or consequences of it), committed by the reader of this article. It's like having a knife; either you can productively cut veggies or food for cooking, or go around stabbing. Choice is yours, I've got no hand in this.</li>
+			</ol>
+			<h3>Introduction</h3>
+			<p>
+				I assume that the person reading this would have, at the very least, used Microsoft Windows. For those of you who didn’t know, there is another family of operating systems, like Windows or Mac OS, which is free, lighter and often tailor-made for specific purposes alone — The GNU/Linux Operating system(s).
+			</p>
+			<p>
+				<strong>For this tutorial, we’ll need:</strong>
+			</p>
+			<ul>
+				<li>A USB stick of minimum 8GB</li>
+				<li>A laptop PC with a Wifi Card/Adaptor</li>
+			</ul>
+			<p>
+				We’ll be using <em>Kali Linux</em> for doing this.
+			</p>
+			<p><strong>
+				Important Note:<br><br>
+				For this tutorial to work, your Wi-Fi Card should be able to switch into “Monitor Mode”. It can only be easily determined once we boot into Kali Linux. So there is a chance that you wouldn’t be able to proceed once you get to know that your card does not support Monitor Mode. But hey, don’t be disheartened. You’ll have made a valuable tool already by then… If you wanna take a step further and find it within Windows itself, go <a href="https://techwiser.com/check-if-wireless-adapter-supports-monitor-mode/" target="blank">here</a>.
+			</strong></p>
+			<blockquote>
+				<strong>What is Kali Linux?</strong><br><br>
+				<p>
+					Kali Linux is a usage-specific, “version” or more correctly, distro (short for distribution) made on top of Debian Linux (which is yet another distro). This was specially made for the purpose of Penetration Testing and Ethical Hacking. As a matter of fact, the things mentioned in this article can be done in any Linux distro except the fact that you’ll have to individually install all the programs that are being mentioned. These programs come pre-installed in Kali Linux, which is the reason why it is highly preferred.
+				</p>
+				<p>
+					Oh, and Linux is a family of free and open-source operating systems. Do learn about them. It’s a whole world in itself.
+				</p>
+			</blockquote>
+			<h3>Downloads</h3>
+			<p>
+				We’ll need to download two files from the Internet.
+			</p>
+			<p>
+				One, will be the <strong>ISO file of Kali Linux</strong>. ISO files are just compressed disks containing programs (well, sorta). And two, will be a tool for writing the ISO into a USB Drive — <strong>Rufus</strong>.
+			</p>
+			<p>
+				There are various versions of both of these. But for this tutorial, and for further convenience, I will be using Kali Linux 2019.3 and Rufus 3.11. The following two links will directly download them for you.
+			</p>
+			<p>
+				<a href="https://cdimage.kali.org/kali-2019.3/kali-linux-2019.3-amd64.iso">Link for downloading Kali Linux 2019.3</a> & <a href="https://github.com/pbatard/rufus/releases/download/v3.11/rufus-3.11.exe">link for downloading Rufus 3.11</a>
+			</p>
+			<p>
+				Of course, you can use later versions of both. But when it comes to Kali Linux, they branched out their ISOs into Live USB and Installation versions from ver.2020 and later. So I prefer sticking to ver.2019 rather than 2020.
+			</p>
+			<blockquote>
+				<p>
+					<strong>What is Rufus?</strong>
+				</p>
+				<p>
+					Rufus is a free and open-source portable application for Microsoft Windows that can be used to format and create bootable USB flash drives or Live USBs. (I just copied that from Wikipedia.)				
+				</p>
+				<p>
+					Plus-point is that Rufus requires no installation. Download the 1 MB program and you are good to go!
+				</p>
+				<p>
+					<strong>What do you mean by Live USB and Installation?</strong>
+				</p>
+				<p>
+					In simple words, the ISO can be run in two ways; either by partitioning your disk space and installing the ISO to that dedicated partition (a.k.a <strong>Dual-Booting</strong>) or by directly running the ISO from the USB itself (a.k.a <strong>Live USB</strong>).
+				</p>
+				<p>
+					Live USB is highly portable, though slightly less powerful than an installation. We’ll be using a Live USB in this tutorial
+				</p>
+			</blockquote>
+			<h3>Setting up Kali Linux</h3>
+			<figure>
+				<img src="../../images/tutorial/sudev/img1.png" alt="">
+				<figcaption>Rufus settings just before pressing START</figcaption>
+			</figure>
+			<ol>
+				<li>Plug-in your USB. <strong>(Warning! : Everything in your USB will be wiped clean. Back up any important files)</strong> I am using an 8GB SanDisk USB.</li>
+				<li>Launch Rufus. By default, your USB device name would appear under <strong>“Device”</strong>. If not, click on the box and choose the name of your USB device.</li>
+				<li>Choose <strong>“Disk or ISO image (Please select)”</strong> under <strong>“Boot selection”</strong> if not already selected. Then click on <strong>“SELECT”</strong>. Browse to where you saved the Kali Linux ISO and choose it.</li>
+				<li>Under <strong>“Persistent partition size”</strong>, slide the slider or type in a value for setting the size. This isn’t compulsory, but I very highly recommend this. Making a persistent partition will help you to save settings and created files inside Kali. They won’t get wiped out once you turn off your system. Without persistence, your Live USB would start up as a fresh Operating System every single time, i.e., it won’t save anything you do or make within Kali. I am pulling my slider all the way right, for having 4GB of persistent partition (may vary, depending on your USB size). <strong>[Refer to the screenshot above]</strong></li>
+				<li>Leave the rest of the settings untouched and press <strong>“START”</strong>. You will be prompted to download a small support file for writing Linux images (if this is your first time). Proceed with it. Next, you might encounter an option for choosing between ISO or DD. Go with ISO (it will be shown as recommended).</li>
+				<li>Wait for your USB to be formatted and overwritten. During this process, instances of File Explorer may open up. Don’t mind it. You may close it safely. Once complete, it will show READY! and you may unplug your USB.</li>
+				<li>Voila! You now have a Kali Live USB.</li>
+				<li><strong>The steps forward will vary highly depending on your PC/Laptop brand and model</strong>. Shut down your PC. Once it is off, plug in your Live USB (do not remove it until the end of this tutorial now). Turn your PC on, but don’t let it boot into Windows. Instead, boot into BIOS (please search how to open <strong>BIOS</strong> for your specific brand and model. You might have to force shutdown your device several times in this and following processes.).</li>
+				<li>In the BIOS menu, find the option for disabling <strong>Secure Boot</strong>. Don’t worry, disabling secure boot doesn’t necessarily put your PC at a risk of viruses or something. It is merely meant for allowing the PC to boot into an Operating System other than Windows. As a matter of fact, some few laptop models can boot into the Live USB without disabling the secure boot. But it’s rare. So I suggest that you disable the secure boot</li>
+				<li>Next, look around for altering the <strong>Boot Device Order</strong> of your system. Place USB Diskette (or such similar device name) at the top of the list. This may vary according to models too. Some models allow to boot directly and automatically into the USB in the next boot-up, while others might prompt you to manually choose the boot device. For my hp laptop, I had to hold F10 button while booting up and I could order my Boot order to automatically boot into USB when plugged.</li>
+				<li>After figuring it out, Save and Exit (usually the F10 button). Switch on the device if it isn’t rebooting already. If everything went well, you would land in the following page. If it didn’t, pull out your USB, force shutdown your PC, plug in your USB and turn it on. If it still doesn’t show up, go to Step 8 and review the steps again.</li>
+				<br><figure>
+					<img src="../../images/tutorial/sudev/img2.png" alt="">
+					<figcaption>The Kali Linux Boot Menu</figcaption>
+				</figure>
+				<li>Use the arrow keys of your keyboard and choose <strong>“Live USB Persistence”</strong> or <strong>“Live System (persistence, check kali.org/prst)”</strong>. Press Enter and wait for the Kali Linux to boot up.</li>
+				<li>Once it boots up, you would have landed in the following screen. Congratulations, you have successfully got into Kali Linux!!</li>
+			</ol>
+			<figure>
+				<img src="../../images/tutorial/sudev/img3.png" alt="">
+				<figcaption>The Kali Linux Desktop</figcaption>
+			</figure>
+			<p>Take your time and dig around to get the hang of the environment. If you are using a Linux for the first time, these things may seem a bit intimidating at first. Feel free to Google about general things and familiarize yourself a tad bit.</p>
+			<h3>Firing up Aircrack-ng (this is where the action begins. 😏)</h3>
+			<p>Kali Linux has a ton of tools meant for various Penetration Testing purposes. We are going to use <strong>Aircrack-ng</strong>.</p>
+			<blockquote>
+				<p><strong>Aircrack-ng</strong> is a tool used for scanning, and injecting packets in a Wi-Fi network. In simpler words, every time you connect to a Wi-Fi network, you are sending encrypted packets of data over the air. Aircrack-ng enables your device to intercept (or more correctly, monitor and/or capture) these packets and send packets of it’s own into the Wi-Fi network.</p>
+				<p>P.S. You don’t need to know or save the password of the Wi-Fi network in your laptop. This method can be done on a completely foreign Wi-Fi network.</p>
+			</blockquote>
+			<ol>
+				<li>Open the <strong>Terminal</strong>. It is the third icon from top on the taskbar to your left. You can also open it by going to <strong>“Show Applications”</strong> (last icon) and then scrolling down and clicking on “Terminal”. [Your terminal might show the prompt as root@kali, unlike mine. Don’t worry, my system is modified a bit, but it won’t affect the commands we’re going to run.]</li>
+				<br><figure>
+					<img src="../../images/tutorial/sudev/img4.png" alt="">
+					<figcaption>Kali Terminal</figcaption>
+				</figure>
+				<li><p>In the terminal, type</p></li>
+				<blockquote>ifconfig</blockquote>
+				<p>and press enter. In the list that follows, note the name of your Wi-Fi Card. (Mostly it will be wlan0).</p>
+				<figure>
+					<img src="../../images/tutorial/sudev/img5.png" alt="">
+					<figcaption>List of all the network devices</figcaption>
+				</figure>
+				<p>So here, the name of my Wi-Fi card is wlan0.</p>
+				<p>If it doesn’t show up, it could be because your laptop is missing the drivers for Wireless Card in Linux. Please do search about it.</p>
+				<li><p>Next, type</p></li>
+				<blockquote>airmon-ng check kill</blockquote>
+				<p>This will turn off the Wi-Fi card and disconnects you from any connected Wi-Fi networks.</p>
+				<p>After that, type</p>
+				<blockquote>airmon-ng start &lt;name-of-interface&gt;</name-of-interface></blockquote>
+				<p>or in this case</p>
+				<blockquote>airmon-ng start wlan0</blockquote>
+				<p>This is the place where the former mentioned warning comes into effect. If your card supports <strong>Monitor Mode</strong>, you would get the following (or closely similar) output.</p>
+				<figure>
+					<img src="../../images/tutorial/sudev/img6.png" alt="">
+					<figcaption>Successfully switched to monitor mode</figcaption>
+				</figure>
+				<p>If not, I am sorry. You wouldn’t be able to perform anything that is mentioned forward. Please don’t be disheartened. If you were a beginner, at this part of the tutorial, you would be having a Kali Live USB right? Trust me, that has a seriously high potential and a lot to learn and use. Do explore.</p>
+				<blockquote>In <strong>Monitor Mode</strong>, you would be able to see all the surrounding Wi-Fi networks, its strength, the number of devices connected to each network, the unique MAC ID of every single one of those devices, and which of those devices are actively sending/receiving data.</blockquote>
+				<p>Your Wi-Fi card’s name would have the suffix ‘mon’ appended to it, now. So, wlan0 is now wlan0mon.</p>
+				<li>Next up, we gotta initiate a scan to check all the active Wi-Fi connections around us. For the purpose of this tutorial, I would be hacking the password of a Wi-Fi network named <strong>‘Hacker 101’</strong> (which is actually just my hotspot 😅).</li>
+				<p>Next, type the following command:</p>
+				<blockquote>airodump-ng &lt;interface_name&gt;</interface_name></blockquote>
+				<p>or in this case:</p>
+				<blockquote>airodump-ng wlan0mon</blockquote>
+				<p>and hit enter. You’ll be taken to an instance (like the screenshot below) which scans the networks around you. Give it some time to procure info of the networks and the devices connected to them.</p>
+				<img src="../../images/tutorial/sudev/img7.png" alt="">
+				<br><br>
+				<blockquote>
+					<p>Let’s analyse this screenshot for a better understanding. The BSSID in the first table is the MAC address of the Wi-Fi networks. These networks may or may not have a device connected to them.</p>
+					<p>The list below that, shows all the devices which are connected and actively sending packets around you. In that second table, ‘station’ is the MAC addresses of all the devices connected to the corresponding BSSID.If the device is actively sending/receiving data, you would see a quick increase in its Frames.</p>
+				</blockquote>
+				<p>Note the BSSID and Channel number (under the column CH) of the target network. In this case, it is 0C:F3:46:D5:B7:C5 and 6, respectively.</p>
+				<p>Press Ctrl+C to stop the scan. You’ll have to restart the scan but with conditions (switches) now.</p>
+				<li>Some concepts before the next step. You may skip if you don’t want to know.</li>
+				<br><blockquote>As I said before, Wi-Fi works by sending packets of encrypted data to and fro the device and router. The password of a Wi-Fi is also such a packet. When you are asked to type the password of your Wi-Fi in your phone or tab or laptop, you are sending a “hashed” (encrypted) packet of the password. The router then decodes the packet and accepts it if it is right. Hence, we say that the router accepted a <strong>“handshake”</strong>. Once accepted, there’s no more need of sending such a handshake packet during the whole time that the device is connected. It will be required to be sent again only when the device gets disconnected and has to reconnect again. This handshake file contains the password but in hidden form. We’ll have to intercept the handshake as it is being sent i.e. at the exact moment that it is connecting. What we are doing next is setting up a listener to detect when a handshake is sent and accepted, and to intercept and store the handshake into a file, so that we can crack the password later on.</blockquote>
+				<p>After you stopped the scan, type the same command as earlier, but this time with switches:</p>
+				<blockquote>airodump-ng -w &lt;filename_to_store_hash_key&gt; -c &lt;channel_number&gt; &lt;interface_name&gt;</blockquote>
+				<p>or in this case:</p>
+				<blockquote>airodump-ng -w test -c 6 wlan0mon</blockquote>
+				<p>and press enter.</p>
+				<p>In this,</p>
+				<ul>
+					<li>-w is used for specifying the name of the set of files that’ll store the encrypted password file when we get hold of it. ‘test’ will be the name of the set of files.</li>
+					<li>-c is used for fixing the scan to just one single channel. This avoids any unnecessary noise during the capture and makes the process a lot more cleaner.</li>
+				</ul>
+				<p>The scan would’ve begun again, this time with maybe fewer networks than before. But since we fixed our channel to the channel number that we noted earlier (i.e. 6), we get to see our target network.</p>
+				<p>Now keep this scanning alive. Don’t close off the terminal until we get a <strong>“handshake”</strong>.</p>
+			</ol>
+			<h3>De-authing devices</h3>
+			<p>For getting the password file, we’ll need a device to try and connect to the target Wi-Fi network at the same time as we are scanning. Since this is highly unlikely, we are gonna have to do a teeny-weeny “trick”:</p>
+			<p>We are gonna kick people out of their own Wi-Fi!</p>
+			<p>Yup, we jam their signal and then force them to reconnect again, all at the same time that we are scanning. This process of kicking devices out of a network is called <strong>De-authentification</strong>, or for convenience, de-authing.</p>
+			<p>For this, you have to keep that scanning terminal alive and untouched. Note down the MAC address of the target Wi-Fi network (listed under BSSID, here). Now, open a new terminal (right-click on terminal icon in the taskbar and open new window). Then type the following command in the new terminal:</p>
+			<blockquote>aireplay-ng -0 0 -a &lt;MAC_address_of_target_network&gt; &lt;interface_name&gt;</blockquote>
+			<p>or in this case:</p>
+			<blockquote>aireplay-ng -0 0 -a 0C:F3:46:D5:B7:C5 wlan0mon</blockquote>
+			<p>Please do note, that after aireplay-ng, the thing written is ‘hyphen zero space zero’ not ‘hyphen O space O’. Medium has an awkward font choice for numbers sometimes…</p>
+			<p>In this,</p>
+			<ul>
+				<li>-0 is the switch which indicates that de-auth packages are to be sent. It can also be replaced with -deauth. The zero that follows is the number of packages that’ll be sent. If you put 2 there, two deauth packages would be sent, but when you put zero, infinite packages would be sent, until you choose to stop.</li>
+				<li>-a is the switch for specifying the BSSID of the network we intent to jam.</li>
+			</ul>
+			<p>Anyway, type it and press enter. You would see some repetitive messages stacking below. This means that you are continuously kicking out all the connected devices from that network. If you were testing this on your own network, you could now see that all your connected devices would have disconnected from the network.</p>
+			<figure>
+				<img src="../../images/tutorial/sudev/img8.png" alt="">
+				<figcaption>De-auth command just before execution</figcaption>
+			</figure>
+			<p>While this is happening, head over to the previous terminal, and look at the end of the top line. If it says <strong>‘WPA handshake’</strong> somewhere, VOILA!, you have captured the password file (like it is in the following screenshot). You can now go to the terminal that was sending de-auth packets and press Ctrl+C to stop it. You may also stop the scanning now, since you got the packet.</p>
+			<figure>
+				<img src="../../images/tutorial/sudev/img9.png" alt="">
+				<figcaption>Scanning page which detected a WPA handshake</figcaption>
+			</figure>
+			<p>If it doesn’t say anything about the handshake, wait for like 5–10 seconds. If it still doesn’t, head over to the de-auth terminal and stop it. Check if the handshake is received now. If not, go start the de-auth again. It is either because no one got kicked out, or because the kicked out device didn’t try to reconnect. If it is the first reason, try moving a bit more closer to the router before sending the de-auth packets again; if it’s the second reason, well, you aren’t in power of that, you might have to try it later.</p>
+			<p>You may now close both the terminals.</p>
+			<p>Alright. If you successfully got a WPA handshake, you would have saved the hashed password file and we may proceed to the next step.</p>
+			<h3>Cracking the Hash</h3>
+			<p>For cracking the hashed password, we need a ‘dictionary’. No, not the Oxford Dictionary or stuff. A dictionary is a big list of passwords of many kinds that can be used for such cracking purpose. This is also known as a ‘Dictionary Attack’. Kali comes with quite a few dictionaries built-in.</p>
+			<blockquote>
+				<p>Dictionaries used for the purpose of cracking passwords can range from a text file with a few hundreds of passwords to ones with millions or billions of passwords in it! These passwords are procured through previously conducted Social Engineering Attacks or other means. Do remember that all the possible passwords in the world are not going to be fit into a single dictionary. So the limit of the type of passwords you can crack, depends on how comprehensive a dictionary you are using, or using other methods such as BruteForce.</p>
+				<p>If you are curious of how these dictionaries are used to crack the passwords of Wi-Fi networks, it’s not by decoding the password file as is. But instead, we encode the available passwords from the list and cross check whether the encoded result is the same as the encoded password file. If a match is found, we have cracked the password, if not… well, you get the idea. So this means, you can’t guarantee that any and every password will be cracked successfully. In this tutorial, we’ll be cracking an easy password only.</p>
+			</blockquote>
+			<p>To ready the dictionary for use, we need to unzip it.</p>
+			<p>Type the following code in a new terminal (cd is used for changing directory).</p>
+			<blockquote>cd /usr/share/wordlists/</blockquote>
+			<p>and then (ls is used to list the contents of the current folder)</p>
+			<blockquote>ls</blockquote>
+			<p>This will display all the files in that folder. In it, you would notice a file called <strong>‘rockyou.txt.gz’</strong> . This is the dictionary we’ll be using. For that, we’ll have to unzip it, because it is a compressed file as of now. For unzipping, type:</p>
+			<blockquote>gunzip rockyou.txt.gz</blockquote>
+			<p>Now if you type</p>
+			<blockquote>ls</blockquote>
+			<p>You’ll see that <strong>‘rockyou.txt.gz’</strong> has changed into <strong>‘rockyou.txt’</strong> . If you type ‘nano rockyou.txt’ and wait for like 2–5 mins, you can see the contents of the list (not really very necessary). It takes 2–5 mins to open because it is a really big text file. If you opened it for viewing, close it with Ctrl+X before proceeding to the next step.</p>
+			<figure>
+				<img src="../../images/tutorial/sudev/img10.png" alt="">
+				<figcaption>rockyou.txt unzipped</figcaption>
+			</figure>
+			<p>Great. Now for the finale. We are gonna crack the password file. If you open your file explorer now, you would see five files with the same name but different extensions. Since we used the name ‘test’ for the -w switch, all those five files will have the name ‘test-01’.</p>
+			<ul>
+				<li>test-01.cap</li>
+				<li>test-01.csv</li>
+				<li>test-01.kismet.csv</li>
+				<li>test-01.kismet.netxml</li>
+				<li>test-01.log.csv</li>
+			</ul>
+			<p>(P.S. There could be slight changes in your file name and number depending on what names you gave and how many retries you did)</p>
+			<p>In this, we will be using the .cap file for cracking.</p>
+			<p>Open a fresh terminal. And type the following:</p>
+			<blockquote>aircrack-ng &lt;filename&gt;.cap -w &lt;path_to_dictionary/dictionary_name&gt;</blockquote>
+			<p>or in this case:</p>
+			<blockquote>aircrack-ng test-01.cap -w /usr/share/wordlists/rockyou.txt</blockquote>
+			<p>and press enter. If you get a prompt to choose from multiple handshakes (which is kinda rare), choose the corresponding index number and press enter as well.</p>
+			<p>You’ll see the system trying various hashes one after the other while going through the dictionary. If the Wi-Fi password is there in the dictionary as well, it will show that you have FOUND THE KEY!</p>
+			<figure>
+				<img src="../../images/tutorial/sudev/img11.png" alt="">
+				<figcaption>Cracked the Key! (Don’t mind the wallpaper change)</figcaption>
+			</figure>
+			<p>As you can see in the screenshot above, the password of the network is ‘bankbank’. And hence you have successfully hacked the password of a Wi-Fi Network!!</p>
+			<p>Congratulations!</p>
+			<h3>Limitations</h3>
+			<p>Yup, this was indeed a cool tech, but like anything, it has its limitations too.</p>
+			<ul>
+				<li>For this to work, your target Wi-Fi network should have at least one actively connected device. If it’s a Wi-Fi network which has no devices connected and don’t have or know the password of, you won’t be able to hack it.</li>
+				<li>Your ability to crack the password depends on how hard or easy the password is. If it’s some easy or medium password like 12345678 or helloworld or something, you can hack it with the rockyou.txt dictionary that we used here. Else, you’ll have to use larger dictionaries or resort to other methods such as BruteForcing to crack the password.</li>
+				<li>Your PC/Laptop specifications do matter at the last stage, i.e. the cracking of the password. The better your CPU, the faster you can crack the password. You may also employ your GPU for this job using other programs like Hashcat. Do explore 😃.</li>
+			</ul>
+	</section>
+	<br>
+	<br>
+	
+	<footer id="footer">
+		<div class="container d-md-flex">
+			<div class="mr-md-auto text-center text-md-left">
+				<div class="copyright">
+					&copy; Copyright <strong><span>RoboCET</span></strong>. All Rights Reserved
+				</div>
+				<div class="credits">
+					Designed by <strong>Sourav Satheesh</strong>
+				</div>
+			</div>
+			<div class="social-icons text-center text-md-right">
+				<a href="https://www.facebook.com/robocet/" target="blank"><i class="bx bxl-facebook-circle"></i></a>				
+				<a href="https://www.instagram.com/teamrobocet/" target="blank"><i class="bx bxl-instagram"></i></a>				
+				<a href="https://www.linkedin.com/company/robo-cet/" target="blank"><i class="bx bxl-linkedin"></i></a>				
+				<a href="https://github.com/robocet" target="blank"><i class="bx bxl-github"></i></a>				
+			</div>
+		</div>
+	</footer>
+	
+	<div id="aaa" style="height: 100vh; width: 100vw; position: fixed; top: 0; left: 0; z-index: -1000;"></div>
+	<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+	<script src="../../assets/jquery/jquery.min.js"></script>
+	<script src="../../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="../../assets/jquery.easing/jquery.easing.min.js"></script>
+	<script src="../../js/resources.js"></script>
+	<script src="../../assets/three.r119.min.js"></script>
+	<script src="../../assets/vanta.net.min.js"></script>
+	<script>
+	VANTA.NET({
+	  el: "#aaa",
+	  mouseControls: true,
+	  touchControls: true,
+	  gyroControls: true,
+	  minHeight: 100.00,
+	  minWidth: 100.00,
+	  scale: 1,
+	  scaleMobile: 1.00,
+	  color: 0xa75b17,
+	  backgroundColor: 0x04121d,
+	})
+	</script>
+</body>
+</html>

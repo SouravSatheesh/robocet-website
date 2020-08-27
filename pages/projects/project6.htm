@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Smart Waste Bin</title>
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../assets/icofont/icofont.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css">
+	<link rel="stylesheet" href="../../css/tutorial.css">
+</head>
+<body>
+
+	<header id="header" class="fixed-top">
+		<div class="container d-flex align-items-center">
+			<h1 class="logo mr-auto">
+			  <a href="../../index.htm">
+				  <img src="../../images/logo.png" alt="">
+			  </a>
+			</h1>
+		  <nav class="nav-menu d-none d-lg-block">
+			<ul>
+				<li><a href="../../index.htm">Home</a></li>
+				<li><a href="../articles.htm">Articles</a></li>
+				<li><a href="../tutorials.htm">Tutorials</a></li>
+				<li><a href="../projects.htm" class="active">Projects</a></li>
+			</ul>
+		  </nav>
+		</div>
+	</header><!-- End Header -->
+
+	
+	<section class="container heading">
+		<h2 class="title">Smart Waste Bin</h2>
+	</section>
+
+	
+	<section class="container main-content">
+		<p>The root cause and challenge to the “Health and Social Welfare” is the improper management of waste. As tackling the root cause of diseases and serenity of nature at the root level can eliminate the cause thereby taking our society to a new dimension by preventing 50% health problems caused by the waste(as insect and other microbes grow in the trash bin and spread epidemics also get into our food chain if it's near the water bodies).</p>
+		<figure class="text-center">
+			<img src="../../images/projects/proj6/img1.png" style="max-height: 500px; width: auto; max-width: 100%;" alt="">
+			<figcaption>Smart Waste Bin</figcaption>
+		</figure>
+		<br><h4>Materials Used:</h4>
+		<ul style="margin-left: 20px;">
+			<li>Trash bin</li>
+			<li>Ultrasonic ping sensors</li>
+			<li>Temperature, Humidity, Moisture sensors)</li>
+			<li>Gyro sensors</li>
+			<li>Arduino</li>
+		</ul>
+		<br><h4>Mechanism and Further Development:</h4>
+		<p>Our project focuses on automating and networking garbage bins that are in various parts of the city.</p>
+		<ol>
+			<li>Each garbage bin has got an ultrasonic ping sensor using which it can be determined whether the bin is empty or not or how much % of the bin is filled.</li>
+			<li>It has got a temperature, humidity, moisture sensors which helps to determine weather conditions, presence of anaerobic respiration, and accordingly plan garbage disposals</li>
+			<li>It has got a gyro through which it can know whether the bin has fallen and all the rubbish came out</li>
+			<li>All the garbage bins around the city are connected to a server using “Internet Of Things” and the server monitors which bins are filled and which are not and its plans the shortest possible route to go and collect the garbage and displays the route in the Google maps. This on a large scale can save tones of fossil fuel.</li>
+			<li>We also created an application for smartphones where you can observe the state of the sensors and also offers notifications depending on the state of the sensors.</li>
+			<li>The data collected by the sensors form big data by time going and can be analyzed to know the rate of waste forming. Also, this raw data collected can predict many such things.</li>
+			<li>In further advancement the trash bin will be given robotic moving capability thereby it can move itself to the dumb yard and can come back to the place when it is full.</li>
+		</ol>
+		<br><h4>Interface:</h4>
+		<br><h5>1. Ultrasonic ping sensor interface with Arduino</h5>
+		<p>This measures the distance between the nearest object and the sensor. It works by sending out an ultrasonic sound and listening to the echo as it bounces off a surface. There are four pins you can use for sensor interface: VCC, Trig (signal output pin), Echo (signal input pin), and GND.</p>
+		<figure class="text-center">
+			<img src="../../images/projects/proj6/img2.png" style="max-height: 500px; width: auto; max-width: 100%;" alt="">
+			<figcaption>Ultrasonic ping sensor interface with Arduino</figcaption>
+		</figure>
+		<ul>
+			<li>Connect the Vcc pin of the sensor to the 5V of Arduino.</li>
+			<li>Connect the GND to the GND pin of Arduino.</li>
+			<li>Connect the Echo pin to a digital pin of Arduino.</li>
+			<li>Connect the Trig pin to a digital pin of Arduino.</li>
+		</ul>
+		<br><h5>2. Temperature, Humidity, Moisture sensors interface</h5>
+		<p>A humidity sensor (or hygrometer) detects, monitors, and records both moisture and air temperature.</p>
+		<figure class="text-center">
+			<img src="../../images/projects/proj6/img3.png" style="max-height: 500px; width: auto; max-width: 100%;" alt="">
+			<figcaption>Temperature, Humidity, Moisture sensors interface</figcaption>
+		</figure>
+		<ul>
+			<li>Connect the Vcc pin to the 3.3V pin of Arduino.</li>
+			<li>Connect the GND pin of the sensor to the GND pin of the Arduino.</li>
+			<li>Connect the DATA pin of the sensor to the analog input pin of Arduino.</li>
+		</ul>
+		<br><h5>3. Gyro sensor interface</h5>
+		<p>MPU6050 module is a small chip that has both a gyro and an accelerometer. The MPU-6050 is an 8 pin 3-axis Gyroscope, 3-axis Accelerometer, Digital Motion Processor, and Temperature Sensor, all in one IC.</p>
+		<figure class="text-center">
+			<img src="../../images/projects/proj6/img4.png" style="max-height: 500px; width: auto; max-width: 100%;" alt="">
+			<figcaption>Gyro sensor interface</figcaption>
+		</figure>
+		<ul>
+			<li>Connect the Vcc pin to the 5V pin of Arduino.</li>
+			<li>Connect the GND pin of the sensor to the GND pin of the Arduino.</li>
+			<li>Connect the SCL pin on the MPU 6050 to the Arduino's analog pin.</li>
+			<li>Connect the SDA pin on the MPU 6050 to the Arduino's analog pin.</li>
+			<li>Connect the INT pin on the MPU 6050 to the Arduino's digital pin.</li>
+		</ul>
+		<br><h4>Project Done By:</h4>
+		<ul>
+			<li>Basil Mathai</li>
+			<li>Hariharan G</li>
+		</ul>
+	</section>
+
+	<br>
+	<br>
+	<footer id="footer">
+		<div class="container d-md-flex">
+			<div class="mr-md-auto text-center text-md-left">
+				<div class="copyright">
+					&copy; Copyright <strong><span>RoboCET</span></strong>. All Rights Reserved
+				</div>
+				<div class="credits">
+					Designed by <strong>Sourav Satheesh</strong>
+				</div>
+			</div>
+			<div class="social-icons text-center text-md-right">
+				<a href="https://www.facebook.com/robocet/" target="blank"><i class="bx bxl-facebook-circle"></i></a>				
+				<a href="https://www.instagram.com/teamrobocet/" target="blank"><i class="bx bxl-instagram"></i></a>				
+				<a href="https://www.linkedin.com/company/robo-cet/" target="blank"><i class="bx bxl-linkedin"></i></a>				
+				<a href="https://github.com/robocet" target="blank"><i class="bx bxl-github"></i></a>				
+			</div>
+		</div>
+	</footer>
+	
+	<div id="aaa" style="height: 100vh; width: 100vw; position: fixed; top: 0; left: 0; z-index: -1000;"></div>
+	<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+	<script src="../../assets/jquery/jquery.min.js"></script>
+	<script src="../../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="../../assets/jquery.easing/jquery.easing.min.js"></script>
+	<script src="../../js/resources.js"></script>
+	<script src="../../assets/three.r119.min.js"></script>
+	<script src="../../assets/vanta.net.min.js"></script>
+	<script>
+	VANTA.NET({
+	  el: "#aaa",
+	  mouseControls: true,
+	  touchControls: true,
+	  gyroControls: true,
+	  minHeight: 100.00,
+	  minWidth: 100.00,
+	  scale: 1,
+	  scaleMobile: 1.00,
+	  color: 0xa75b17,
+	  backgroundColor: 0x04121d,
+	})
+	</script>
+</body>
+</html>
