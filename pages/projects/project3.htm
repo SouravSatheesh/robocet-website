@@ -39,7 +39,7 @@
 	<section class="container main-content">
 		<p>Rubik’s cube! One of the most fascinating and challenging puzzles for man and machine. Many have come up with an easy and fast solution to this. Rubik's Cube Solving Robot is a robotic system that solves a Rubik's Cube puzzle autonomously. This robot aims to solve the cube in the fastest way possible.</p>
 		<figure class="text-center">
-			<img src="../../images/projects/proj3/img1.png" style="max-height: 500px; width: auto; max-width: 100%;" alt="">
+			<img src="../../images/projects/proj3/img1-365.png" srcset="../../images/projects/proj3/img1-365.png 365w, ../../images/projects/proj3/img1-735.png 735w" style="max-height: 500px; width: auto; max-width: 100%;" alt="">
 			<figcaption>Rubik's Cube Solving Robot</figcaption>
 		</figure>
 		<br><h4>Materials Used:</h4>
@@ -56,7 +56,7 @@
 		<br><h5>Stepper Motor interface with ESP8266</h5>
 		<p>Stepper Motor is a Brushless DC Motor. Stepper motor receives control signals to rotate it in steps. Since the stepper motors require high current which cannot be handled by a microcontroller or a microprocessor, the motors are wired to stepper motor drivers. All the 6 stepper motor drivers are then connected to ESP8266. We used A4988 is a bipolar stepper motor driver.</p>
 		<figure class="text-center">
-			<img src="../../images/projects/proj3/img2.png" style="max-height: 500px; width: auto; max-width: 100%;" alt="">
+			<img src="../../images/projects/proj3/img2-365.png" srcset="../../images/projects/proj3/img2-365.png 365w, ../../images/projects/proj3/img2-632.png 632w" style="max-height: 500px; width: auto; max-width: 100%;" alt="">
 			<figcaption>Stepper Motor interface with ESP8266</figcaption>
 		</figure>
 		<ul>
@@ -70,6 +70,11 @@
 		<p>Firstly, using a webcam, the image of each face of the cube is taken in a specific order. Using OpenCV, colour sequences of each face is identified from the image. With God's algorithm, the quickest solution to solve the cube is determined by using the same. The output is a series of moves to resolve the cube. This output is converted into a set of instructions for the six stepper motors interacting with the Rubik's Cube. Each stepper motor is controlled by stepper motor drivers. The sequence of moves produced to solve the cube is executed by driving the stepper motors.</p>
 		<br><h5>God's Algorithm</h5>
 		<p>God's algorithm is a concept that arose from discussions of how to solve Rubik's cube, but it can also be extended to other mathematical puzzles and games. It refers to an algorithm, which generates a solution with the least possible number of moves. The maximum number of moves it takes to solve a Rubik's Cube is 20 which is also known as God's Number.</p>
+		<br><h4>Working Video:</h4><br>
+		<figure class="text-center">
+			<div class='onq-youtube-player' style='width: 640px; display: block; position: relative; cursor: pointer; height:360px; overflow: hidden; margin: auto; max-width: 100%;' data-id='1B1DFwUb-aI' data-width='640' data-height='360' data-ssv='false' data-spc='false' data-sta='false' data-afs='false' data-dkc='false' data-ecc='false' data-eap='false'><img src='//i.ytimg.com/vi/1B1DFwUb-aI/hqdefault.jpg' style='display: block; left: 0; margin: auto; width: 100%; height: 100%; position: absolute; right: 0;'><div style='height: 72px; width: 72px; left: 50%; top: 50%; margin-left: -36px; margin-top: -36px; position: absolute; background: url("https://www.onqmarketing.com.au/wp-content/plugins/onq-youtube-embed-generator/playbutton.png") no-repeat; background-size: 72px;'></div></div>		
+			<figcaption>Rubik's Cube Solving Robot</figcaption>
+		</figure>
 		<br><h4>Assembling:</h4>
 		<ul>
 			<li>Fix the 6 stepper motor in the 3D printed frame.</li>
@@ -101,7 +106,7 @@
 		</div>
 	</footer>
 	
-	<div id="aaa" style="height: 100vh; width: 100vw; position: fixed; top: 0; left: 0; z-index: -1000;"></div>
+	<div id="aaa" style="height: 100vh; width: 100vw; position: fixed; top: 0; left: 0; z-index: -1000; filter: brightness(50%);"></div>
 	<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
 	<script src="../../assets/jquery/jquery.min.js"></script>
@@ -123,6 +128,9 @@
 	  color: 0xa75b17,
 	  backgroundColor: 0x04121d,
 	})
+	</script>
+	<script>
+	!function(){for(var t=document.getElementsByClassName("onq-youtube-player"),e=0;e<t.length;e++)t[e].onclick=function(){var t=document.createElement("iframe"),e="true"==this.dataset.ssv?"1":"0",s="true"==this.dataset.spc?"1":"0",i="true"==this.dataset.sta?"1":"0",a="true"==this.dataset.dkc?"1":"0",r="true"==this.dataset.ecc?"1":"0",o="true"==this.dataset.eap?"1":"0";for(t.setAttribute("src","//www.youtube.com/embed/"+this.dataset.id+"?rel="+e+"&controls="+s+"&showinfo="+i+"&disablekb="+a+"&cc_load_policy="+r+"&autoplay="+o),t.setAttribute("frameborder","0"),t.setAttribute("id","youtube-iframe"),t.setAttribute("style","width: 100%; height: 100%; position: absolute; top: 0; left: 0;"),"true"==this.dataset.afs&&t.setAttribute("allowfullscreen","");this.firstChild;)this.removeChild(this.firstChild);this.appendChild(t)}}();
 	</script>
 </body>
 </html>

@@ -534,7 +534,9 @@ section .section-header h3::before, section .section-header h3::after {
 
 @media (max-width: 992px) {
 	.about .row .video {
-		height: 250px;
+		min-height: 280px;
+		max-width: 540px;
+		margin: auto;
 	}
 	.about .content {
 		padding-right: 0;
